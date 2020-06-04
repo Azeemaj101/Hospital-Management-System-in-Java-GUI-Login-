@@ -54,7 +54,7 @@ public class MainClass
 		System.out.println("\nPress 9   For Hospital       EXITS               ");
 		for(int i=0; i<=10 ; i++)
 		{
-			 System.out.println();
+			System.out.println();
 		}
 		int ParentSwitch=input.nextInt();
 		switch(ParentSwitch)
