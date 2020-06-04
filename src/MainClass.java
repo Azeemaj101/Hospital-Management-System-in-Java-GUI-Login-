@@ -1446,7 +1446,7 @@ public class MainClass
 					boolean whileHCI=false;
 					while(whileHCI==false)
 					{
-						System.out.println("Press Enter To Continue....");
+						System.out.println("Press Enter To Continue.... ");
 						System.in.read();
 						for(int i=0; i<=40 ; i++)
 						{
