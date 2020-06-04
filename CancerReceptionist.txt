@@ -1,0 +1,14 @@
+
+1 12 Dr.Azeem
+2 13 Dr.Abdul
+3 14 Dr.Lateef
+4 15 Dr.Marzuq
+5 16 Dr.Fawzi
+6 17 Dr.Aisha
+7 18 Dr.Aleena
+8 19 Dr.Maira
+9 20 Dr.Maryam
+10 21 Dr.Aiza
+11 22 Dr.Amina
+12 23 Dr.Khadija
+13 24 Dr.Sadaf

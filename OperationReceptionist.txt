@@ -1,0 +1,14 @@
+
+1 00 Dr.Qasim
+2 13 Dr.Rabia
+3 14 Dr.Fatima
+4 15 Dr.Umer
+5 16 Dr.Maaz
+6 17 Dr.Zeeshan
+7 18 Dr.Shayan
+8 19 Dr.Shazaib
+9 20 Dr.Bilal
+10 21 Dr.Ahmad
+11 22 Dr.Gani
+12 23 Dr.Abdullah
+13 24 Dr.Maira

@@ -1,0 +1,14 @@
+
+1 12 Dr.Manahil
+2 13 Dr.Usman
+3 14 Dr.Shaista
+4 15 Dr.Nimra
+5 16 Dr.Zoya
+6 17 Dr.Afnan
+7 18 Dr.Amreen
+8 19 Dr.Maryam
+9 20 Dr.Areeba
+10 21 Dr.Intikhab
+11 22 Dr.Aleena
+12 23 Dr.Farah
+13 24 Dr.Maira
