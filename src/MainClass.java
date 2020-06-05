@@ -1434,7 +1434,7 @@ public class MainClass
 		    	{
 		    		for(int i=0; i<=40 ; i++)
 					{
-						System.out.println();
+						System.out.println() ;
 					}
 		    		System.out.println("Enter Name of Eye Department Head");
 			    	String HName=input.next();
