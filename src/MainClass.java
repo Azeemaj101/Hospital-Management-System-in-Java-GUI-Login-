@@ -5,8 +5,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.concurrent.TimeUnit;
 public class MainClass 
 {
-	public static void main(String [] args) throws InterruptedException, IOException
-	{
+	 public static void main(String [] args) throws InterruptedException, IOException
+	 {
 		Login Run=new Login();
 		Exit Ex=new Exit();
 		Scanner input=new Scanner(System.in);
