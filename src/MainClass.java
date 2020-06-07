@@ -7,7 +7,7 @@ public class MainClass
 {
 	public static void main(String [] args) throws InterruptedException, IOException
 	{
-		Login Run=new Login();
+		VandingMechine Run=new VandingMechine();
 		Exit Ex=new Exit();
 		Scanner input=new Scanner(System.in);
 		HospitalManagementSystem obj=new HospitalManagementSystem();
@@ -20,7 +20,7 @@ public class MainClass
 		System.out.println("Continue....");
 		System.in.read();
 		System.in.read();
-		if(Login.a != 0)
+		if(VandingMechine.a != 0)
 		{
 		FileReader Fout;
 		BufferedReader Bout = null;
@@ -437,13 +437,14 @@ public class MainClass
 		}
 		case 3:
 		{
-		boolean REPSwitch=false;
-		while(REPSwitch==false)
+		boolean RSwitch=false;
+		while(RSwitch==false)
 		{
 			for(int i=0; i<=40 ; i++)
 			{
 				System.out.println();
 			}
+			System.out.println(RSwitch);
 		System.out.println("\nPress 1   For Hospital Eye       Department");//270
 		System.out.println("\nPress 2   For Hospital Cancer    Department");//543
 		System.out.println("\nPress 3   For Hospital Cardiac   Department");//816
@@ -455,6 +456,7 @@ public class MainClass
 		System.out.println("\nPress 9   For Hospital Nurses              ");//2273
 		System.out.println("\nPress 10  For Hospital Workers             ");//2440
 		System.out.println("\nPress 11  For Hospital Utility   Bills     ");//2607
+		System.out.println("\nPress 12  For Hospital Main      Menu      ");
 		for(int i=0; i<=14 ; i++)
 		{
 			System.out.println();
@@ -468,7 +470,7 @@ public class MainClass
 			{
 				System.out.println();
 			}
-			REPSwitch=true;
+			
 			Eyereceptionist Hp = new Eyereceptionist();
 			System.out.println("Enter Your Password (Eye Department)");
 			int Password=input.nextInt();
@@ -530,8 +532,9 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Eye Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Eye Menu  \nPress 2 For Receptionist Menu \nPress 3 For Main menu ");
 					int HEI=input.nextInt();
+					
 					if(HEI==1)
 					{
 						TimeUnit.SECONDS.sleep(0);
@@ -540,6 +543,14 @@ public class MainClass
 					}
 					else if(HEI==2)
 					{
+						whileHEI=true;
+						WhileEye=true;
+						HEyeWhileSwitch=true;
+					}
+					else if(HEI==3)
+					{
+
+						RSwitch=true;
 						whileHEI=true;
 						WhileEye=true;
 						HEyeWhileSwitch=true;
@@ -575,7 +586,7 @@ public class MainClass
 					{
 						System.out.println();
 					}
-				System.out.println("Press 1 For Eye Menu & Press 2 For Main menu");
+				System.out.println("Press 1 For Eye Menu \nPress 2 For Receptionist Menu\nPress 3 For Main menu");
 				for(int i=0; i<=15 ; i++)
 				{
 					System.out.println();
@@ -589,6 +600,15 @@ public class MainClass
 				}
 				else if(SVE==2)
 				{
+					
+					whilHEV=true;
+					WhileEye=true;
+					System.out.println(RSwitch);
+					HEyeWhileSwitch=true;
+				}
+				else if(SVE==3)
+				{
+					RSwitch=true;
 					WhileEye=true;
 					whilHEV=true;
 					HEyeWhileSwitch=true;
@@ -665,7 +685,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Eye Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Eye Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 					for(int i=0; i<=15 ; i++)
 					{
 						System.out.println();
@@ -681,6 +701,14 @@ public class MainClass
 					{
 						WhileEye=true;
 						whileREI=true;
+						RecpSwitWhil=true;
+					}
+					else if(REI==3)
+					{
+						 
+						RSwitch=true;
+						whileREI=true;
+						WhileEye=true;
 						RecpSwitWhil=true;
 					}
 					else
@@ -724,7 +752,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Eye Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Eye Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 					for(int i=0; i<=15 ; i++)
 					{
 						System.out.println();
@@ -740,6 +768,14 @@ public class MainClass
 					{
 						WhileEye=true;
 						whileREV=true;
+						RecpSwitWhil=true;
+					}
+					else if(REV==3)
+					{
+						 
+						RSwitch=true;
+						whileREV=true;
+						WhileEye=true;
 						RecpSwitWhil=true;
 					}
 					else
@@ -775,7 +811,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Eye Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Eye Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 					for(int i=0; i<=15 ; i++)
 					{
 						System.out.println();
@@ -791,6 +827,14 @@ public class MainClass
 					{
 						WhileEye=true;
 						whileRES=true;
+						RecpSwitWhil=true;
+					}
+					else if(RES==3)
+					{
+						 
+						RSwitch=true;
+						whileRES=true;
+						WhileEye=true;
 						RecpSwitWhil=true;
 					}
 					else
@@ -825,7 +869,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Eye Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Eye Menu \nPress 2 For Receptionist \nPress 3 For Main menu");
 					for(int i=0; i<=15 ; i++)
 					{
 						System.out.println();
@@ -841,6 +885,14 @@ public class MainClass
 					{
 						WhileEye=true;
 						whileRED=true;
+						RecpSwitWhil=true;
+					}
+					else if(RED==3)
+					{
+						 
+						RSwitch=true;
+						whileRED=true;
+						WhileEye=true;
 						RecpSwitWhil=true;
 					}
 					else
@@ -875,7 +927,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Eye Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Eye Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 					for(int i=0; i<=15 ; i++)
 					{
 						System.out.println();
@@ -891,6 +943,14 @@ public class MainClass
 					{
 						WhileEye=true;
 						whileREU=true;
+						RecpSwitWhil=true;
+					}
+					else if(REU==3)
+					{
+						 
+						RSwitch=true;
+						whileREU=true;
+						WhileEye=true;
 						RecpSwitWhil=true;
 					}
 					else
@@ -934,7 +994,6 @@ public class MainClass
 			{
 				System.out.println();
 			}
-			REPSwitch=true;
 			Cancerreceptionist HC = new Cancerreceptionist();
 			System.out.println("Enter Your Password (Cencer Department)");
 			int Password=input.nextInt();
@@ -993,7 +1052,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Cancer Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Cancer Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 					for(int i=0; i<=15 ; i++)
 					{
 						System.out.println();
@@ -1007,6 +1066,14 @@ public class MainClass
 					}
 					else if(HEI==2)
 					{
+						whileHEI=true;
+						WhileCancer=true;
+						HCancerWhileSwitch=true;
+					}
+					else if(HEI==3)
+					{
+						 
+						RSwitch=true;
 						whileHEI=true;
 						WhileCancer=true;
 						HCancerWhileSwitch=true;
@@ -1042,7 +1109,7 @@ public class MainClass
 					{
 						System.out.println();
 					}
-				System.out.println("Press 1 For Cancer Menu & Press 2 For Main menu");
+				System.out.println("Press 1 For Cancer Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 				for(int i=0; i<=15 ; i++)
 				{
 					System.out.println();
@@ -1058,6 +1125,14 @@ public class MainClass
 				{
 					WhileCancer=true;
 					whilHEV=true;
+					HCancerWhileSwitch=true;
+				}
+				else if(SVE==3)
+				{
+					 
+					RSwitch=true;
+					whilHEV=true;
+					WhileCancer=true;
 					HCancerWhileSwitch=true;
 				}
 				else
@@ -1123,7 +1198,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Cancer Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Cancer Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 					for(int i=0; i<=15 ; i++)
 					{
 						System.out.println();
@@ -1137,6 +1212,14 @@ public class MainClass
 					}
 					else if(RCI==2)
 					{
+						WhileCancer=true;
+						whileRCI=true;
+						RecpCancerSwitWhil=true;
+					}
+					else if(RCI==3)
+					{
+						 
+						RSwitch=true;
 						WhileCancer=true;
 						whileRCI=true;
 						RecpCancerSwitWhil=true;
@@ -1172,7 +1255,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Cancer Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Cancer Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 					for(int i=0; i<=15 ; i++)
 					{
 						System.out.println();
@@ -1186,6 +1269,14 @@ public class MainClass
 					}
 					else if(RCV==2)
 					{
+						WhileCancer=true;
+						whileRCV=true;
+						RecpCancerSwitWhil=true;
+					}
+					else if(RCV==3)
+					{
+						 
+						RSwitch=true;
 						WhileCancer=true;
 						whileRCV=true;
 						RecpCancerSwitWhil=true;
@@ -1223,7 +1314,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Cancer Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Cancer Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 					for(int i=0; i<=15 ; i++)
 					{
 						System.out.println();
@@ -1237,6 +1328,14 @@ public class MainClass
 					}
 					else if(RCS==2)
 					{
+						WhileCancer=true;
+						whileRCS=true;
+						RecpCancerSwitWhil=true;
+					}
+					else if(RCS==3)
+					{
+						 
+						RSwitch=true;
 						WhileCancer=true;
 						whileRCS=true;
 						RecpCancerSwitWhil=true;
@@ -1273,7 +1372,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Cancer Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Cancer Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 					for(int i=0; i<=15 ; i++)
 					{
 						System.out.println();
@@ -1287,6 +1386,14 @@ public class MainClass
 					}
 					else if(RCD==2)
 					{
+						WhileCancer=true;
+						whileRCD=true;
+						RecpCancerSwitWhil=true;
+					}
+					else if(RCD==3)
+					{
+						 
+						RSwitch=true;
 						WhileCancer=true;
 						whileRCD=true;
 						RecpCancerSwitWhil=true;
@@ -1323,7 +1430,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Cancer Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Cancer Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 					for(int i=0; i<=15 ; i++)
 					{
 						System.out.println();
@@ -1337,6 +1444,14 @@ public class MainClass
 					}
 					else if(RCU==2)
 					{
+						WhileCancer=true;
+						whileRCU=true;
+						RecpCancerSwitWhil=true;
+					}
+					else if(RCU==3)
+					{
+						 
+						RSwitch=true;
 						WhileCancer=true;
 						whileRCU=true;
 						RecpCancerSwitWhil=true;
@@ -1389,7 +1504,6 @@ public class MainClass
 			{
 				System.out.println();
 			}
-			REPSwitch=true;
 			Cardiacreceptionist HCD = new Cardiacreceptionist();
 			boolean WhileCardiac=false;
 			while(WhileCardiac==false)
@@ -1399,7 +1513,7 @@ public class MainClass
 			System.out.println("Enter Your Password (Cardiac Department)");
 			int Password=input.nextInt();
 			HCD.Login(Password);
-			System.out.println("Press Enter To Continue....");
+			System.out.println("\nPress Enter To Continue....");
 			System.in.read();
 			for(int i=0; i<=40 ; i++)
 			{
@@ -1452,7 +1566,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Cardiac Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Cardiac Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 					for(int i=0; i<=15 ; i++)
 					{
 						System.out.println();
@@ -1466,6 +1580,14 @@ public class MainClass
 					}
 					else if(HCI==2)
 					{
+						whileHCI=true;
+						WhileCardiac=true;
+						HCardiacWhileSwitch=true;
+					}
+					else if(HCI==3)
+					{
+						 
+						RSwitch=true;
 						whileHCI=true;
 						WhileCardiac=true;
 						HCardiacWhileSwitch=true;
@@ -1501,7 +1623,7 @@ public class MainClass
 					{
 						System.out.println();
 					}
-				System.out.println("Press 1 For Cancer Menu & Press 2 For Main menu");
+				System.out.println("Press 1 For Cardiac Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 				for(int i=0; i<=15 ; i++)
 				{
 					System.out.println();
@@ -1517,6 +1639,14 @@ public class MainClass
 				{
 					WhileCardiac=true;
 					whilHCV=true;
+					HCardiacWhileSwitch=true;
+				}
+				else if(SVC==3)
+				{
+					 
+					RSwitch=true;
+					whilHCV=true;
+					WhileCardiac=true;
 					HCardiacWhileSwitch=true;
 				}
 				else
@@ -1587,7 +1717,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Cancer Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Cardiac Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 					for(int i=0; i<=15 ; i++)
 					{
 						System.out.println();
@@ -1601,6 +1731,14 @@ public class MainClass
 					}
 					else if(RCDI==2)
 					{
+						WhileCardiac=true;
+						whileRCI=true;
+						RecpCardiacSwitWhil=true;
+					}
+					else if(RCDI==3)
+					{
+						 
+						RSwitch=true;
 						WhileCardiac=true;
 						whileRCI=true;
 						RecpCardiacSwitWhil=true;
@@ -1636,7 +1774,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Cancer Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Cardiac Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 					for(int i=0; i<=15 ; i++)
 					{
 						System.out.println();
@@ -1654,6 +1792,14 @@ public class MainClass
 						whileRCDV=true;
 						RecpCardiacSwitWhil=true;
 					}
+					else if(RCDV==3)
+					{
+						 
+						RSwitch=true;
+						WhileCardiac=true;
+						whileRCDV=true;
+						RecpCardiacSwitWhil=true;
+       				}
 					else
 					{
 						System.out.println("\n\n\n\n");
@@ -1687,7 +1833,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Cardiac Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Cardiac Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 					for(int i=0; i<=15 ; i++)
 					{
 						System.out.println();
@@ -1701,6 +1847,14 @@ public class MainClass
 					}
 					else if(RCD==2)
 					{
+						WhileCardiac=true;
+						whileRCD=true;
+						RecpCardiacSwitWhil=true;
+					}
+					else if(RCD==3)
+					{
+						 
+						RSwitch=true;
 						WhileCardiac=true;
 						whileRCD=true;
 						RecpCardiacSwitWhil=true;
@@ -1737,7 +1891,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Cancer Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Cardiac Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 					for(int i=0; i<=15 ; i++)
 					{
 						System.out.println();
@@ -1751,6 +1905,14 @@ public class MainClass
 					}
 					else if(RCD==2)
 					{
+						WhileCardiac=true;
+						whileRCD=true;
+						RecpCardiacSwitWhil=true;
+					}
+					else if(RCD==3)
+					{
+						 
+						RSwitch=true;
 						WhileCardiac=true;
 						whileRCD=true;
 						RecpCardiacSwitWhil=true;
@@ -1787,7 +1949,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Cancer Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Cardiac Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 					for(int i=0; i<=15 ; i++)
 					{
 						System.out.println();
@@ -1801,6 +1963,13 @@ public class MainClass
 					}
 					else if(RCU==2)
 					{
+						WhileCardiac=true;
+						whileRCU=true;
+						RecpCardiacSwitWhil=true;
+					}
+					else if(RCU==3)
+					{
+						RSwitch=true;
 						WhileCardiac=true;
 						whileRCU=true;
 						RecpCardiacSwitWhil=true;
@@ -1849,7 +2018,6 @@ public class MainClass
 		}
 		case 4://Receptionist Switch
 		{
-			REPSwitch=true;
 			for(int i=0; i<=40 ; i++)
 			{
 				System.out.println();
@@ -1861,7 +2029,7 @@ public class MainClass
 			boolean WhileCorona=false;
 			while(WhileCorona==false)
 			{
-				System.out.println("Press Enter To Continue....");
+				System.out.println("\nPress Enter To Continue....");
 				System.in.read();
 				for(int i=0; i<=40 ; i++)
 				{
@@ -1916,7 +2084,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Corona Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Corona Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 					for(int i=0; i<=15 ; i++)
 					{
 						System.out.println();
@@ -1930,6 +2098,13 @@ public class MainClass
 					}
 					else if(HCI==2)
 					{
+						whileHCI=true;
+						WhileCorona=true;
+						HCoronaWhileSwitch=true;
+					}
+					else if(HCI==3)
+					{
+						RSwitch=true;
 						whileHCI=true;
 						WhileCorona=true;
 						HCoronaWhileSwitch=true;
@@ -1965,7 +2140,7 @@ public class MainClass
 					{
 						System.out.println();
 					}
-				System.out.println("Press 1 For Corona Menu & Press 2 For Main menu");
+				System.out.println("Press 1 For Corona Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 				for(int i=0; i<=15 ; i++)
 				{
 					System.out.println();
@@ -1981,6 +2156,13 @@ public class MainClass
 				{
 					WhileCorona=true;
 					whilHCV=true;
+					HCoronaWhileSwitch=true;
+				}
+				else if(SVC==3)
+				{
+					RSwitch=true;
+					whilHCV=true;
+					WhileCorona=true;
 					HCoronaWhileSwitch=true;
 				}
 				else
@@ -2014,7 +2196,7 @@ public class MainClass
 					{
 						System.out.println();
 					}
-				System.out.println("Press 1 For Corona Menu & Press 2 For Main menu");
+				System.out.println("Press 1 For Corona Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 				for(int i=0; i<=15 ; i++)
 				{
 					System.out.println();
@@ -2030,6 +2212,13 @@ public class MainClass
 				{
 					WhileCorona=true;
 					whilHCV=true;
+					HCoronaWhileSwitch=true;
+				}
+				else if(SVC==3)
+				{
+					RSwitch=true;
+					whilHCV=true;
+					WhileCorona=true;
 					HCoronaWhileSwitch=true;
 				}
 				else
@@ -2101,7 +2290,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Corona Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Corona Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 					for(int i=0; i<=15 ; i++)
 					{
 						System.out.println();
@@ -2115,6 +2304,13 @@ public class MainClass
 					}
 					else if(RCI==2)
 					{
+						WhileCorona=true;
+						whileRCI=true;
+						RecpCoronaSwitWhil=true;
+					}
+					else if(RCI==3)
+					{
+						RSwitch=true;
 						WhileCorona=true;
 						whileRCI=true;
 						RecpCoronaSwitWhil=true;
@@ -2150,7 +2346,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Corona Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Corona Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 					for(int i=0; i<=15 ; i++)
 					{
 						System.out.println();
@@ -2164,6 +2360,13 @@ public class MainClass
 					}
 					else if(RCV==2)
 					{
+						WhileCorona=true;
+						whileRCV=true;
+						RecpCoronaSwitWhil=true;
+					}
+					else if(RCV==3)
+					{
+						RSwitch=true;
 						WhileCorona=true;
 						whileRCV=true;
 						RecpCoronaSwitWhil=true;
@@ -2201,7 +2404,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Corona Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Corona Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 					for(int i=0; i<=15 ; i++)
 					{
 						System.out.println();
@@ -2215,6 +2418,13 @@ public class MainClass
 					}
 					else if(RCS==2)
 					{
+						WhileCorona=true;
+						whileRCS=true;
+						RecpCoronaSwitWhil=true;
+					}
+					else if(RCS==3)
+					{
+						RSwitch=true;
 						WhileCorona=true;
 						whileRCS=true;
 						RecpCoronaSwitWhil=true;
@@ -2251,7 +2461,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Corona Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Corona Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 					for(int i=0; i<=15 ; i++)
 					{
 						System.out.println();
@@ -2265,6 +2475,13 @@ public class MainClass
 					}
 					else if(RCD==2)
 					{
+						WhileCorona=true;
+						whileRCD=true;
+						RecpCoronaSwitWhil=true;
+					}
+					else if(RCD==3)
+					{
+						RSwitch=true;
 						WhileCorona=true;
 						whileRCD=true;
 						RecpCoronaSwitWhil=true;
@@ -2301,7 +2518,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Corona Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Corona Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 					for(int i=0; i<=15 ; i++)
 					{
 						System.out.println();
@@ -2315,6 +2532,13 @@ public class MainClass
 					}
 					else if(RCU==2)
 					{
+						WhileCorona=true;
+						whileRCU=true;
+						RecpCoronaSwitWhil=true;
+					}
+					else if(RCU==3)
+					{
+						RSwitch=true;
 						WhileCorona=true;
 						whileRCU=true;
 						RecpCoronaSwitWhil=true;
@@ -2381,7 +2605,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Corona Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Corona Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 					for(int i=0; i<=15 ; i++)
 					{
 						System.out.println();
@@ -2395,6 +2619,13 @@ public class MainClass
 					}
 					else if(RIW==2)
 					{
+						WhileCorona=true;
+						whileRIW=true;
+						IsolationSwitWhil=true;
+					}
+					else if(RIW==3)
+					{
+						RSwitch=true;
 						WhileCorona=true;
 						whileRIW=true;
 						IsolationSwitWhil=true;
@@ -2429,7 +2660,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Corona Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Corona Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 					for(int i=0; i<=15 ; i++)
 					{
 						System.out.println();
@@ -2443,6 +2674,13 @@ public class MainClass
 					}
 					else if(RCI==2)
 					{
+						WhileCorona=true;
+						whileRCI=true;
+						IsolationSwitWhil=true;
+					}
+					else if(RCI==3)
+					{
+						RSwitch=true;
 						WhileCorona=true;
 						whileRCI=true;
 						IsolationSwitWhil=true;
@@ -2477,7 +2715,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Corona Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Corona Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 					for(int i=0; i<=15 ; i++)
 					{
 						System.out.println();
@@ -2491,6 +2729,13 @@ public class MainClass
 					}
 					else if(RCI==2)
 					{
+						WhileCorona=true;
+						whileRCI=true;
+						IsolationSwitWhil=true;
+					}
+					else if(RCI==3)
+					{
+						RSwitch=true;
 						WhileCorona=true;
 						whileRCI=true;
 						IsolationSwitWhil=true;
@@ -2542,7 +2787,6 @@ public class MainClass
 			{
 				System.out.println();
 			}
-			REPSwitch=true;
 			Gernalreceptionist HGD = new Gernalreceptionist();
 			System.out.println("Enter Your Password (Gernal Department)");
 			int Password=input.nextInt();
@@ -2550,7 +2794,7 @@ public class MainClass
 			boolean WhileGernal=false;
 			while(WhileGernal==false)
 			{
-				System.out.println("Press Enter To Continue....");
+				System.out.println("\nPress Enter To Continue....");
 				System.in.read();
 				for(int i=0; i<=40 ; i++)
 				{
@@ -2603,7 +2847,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Gernal Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Gernal Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 					for(int i=0; i<=15 ; i++)
 					{
 						System.out.println();
@@ -2617,6 +2861,13 @@ public class MainClass
 					}
 					else if(HGDI==2)
 					{
+						whileHGI=true;
+						WhileGernal=true;
+						HGernalWhileSwitch=true;
+					}
+					else if(HGDI==3)
+					{
+						RSwitch=true;
 						whileHGI=true;
 						WhileGernal=true;
 						HGernalWhileSwitch=true;
@@ -2652,7 +2903,7 @@ public class MainClass
 					{
 						System.out.println();
 					}
-				System.out.println("Press 1 For Gernal Menu & Press 2 For Main menu");
+				System.out.println("Press 1 For Gernal Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 				for(int i=0; i<=15 ; i++)
 				{
 					System.out.println();
@@ -2668,6 +2919,13 @@ public class MainClass
 				{
 					WhileGernal=true;
 					whilHGV=true;
+					HGernalWhileSwitch=true;
+				}
+				else if(SVG==3)
+				{
+					RSwitch=true;
+					whilHGV=true;
+					WhileGernal=true;
 					HGernalWhileSwitch=true;
 				}
 				else
@@ -2738,7 +2996,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Gernal Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Gernal Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 					for(int i=0; i<=15 ; i++)
 					{
 						System.out.println();
@@ -2752,6 +3010,13 @@ public class MainClass
 					}
 					else if(RGI==2)
 					{
+						WhileGernal=true;
+						whileRGI=true;
+						RecpGernalSwitWhil=true;
+					}
+					else if(RGI==3)
+					{
+						RSwitch=true;
 						WhileGernal=true;
 						whileRGI=true;
 						RecpGernalSwitWhil=true;
@@ -2787,7 +3052,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Gernal Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Gernal Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 					for(int i=0; i<=15 ; i++)
 					{
 						System.out.println();
@@ -2801,6 +3066,13 @@ public class MainClass
 					}
 					else if(RGV==2)
 					{
+						WhileGernal=true;
+						whileRGV=true;
+						RecpGernalSwitWhil=true;
+					}
+					else if(RGV==3)
+					{
+						RSwitch=true;
 						WhileGernal=true;
 						whileRGV=true;
 						RecpGernalSwitWhil=true;
@@ -2838,7 +3110,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Gernal Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Gernal Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 					for(int i=0; i<=15 ; i++)
 					{
 						System.out.println();
@@ -2852,6 +3124,13 @@ public class MainClass
 					}
 					else if(RGS==2)
 					{
+						WhileGernal=true;
+						whileRGS=true;
+						RecpGernalSwitWhil=true;
+					}
+					else if(RGS==3)
+					{
+						RSwitch=true;
 						WhileGernal=true;
 						whileRGS=true;
 						RecpGernalSwitWhil=true;
@@ -2888,7 +3167,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Gernal Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Gernal Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 					for(int i=0; i<=15 ; i++)
 					{
 						System.out.println();
@@ -2902,6 +3181,13 @@ public class MainClass
 					}
 					else if(RGD==2)
 					{
+						WhileGernal=true;
+						whileRGD=true;
+						RecpGernalSwitWhil=true;
+					}
+					else if(RGD==3)
+					{
+						RSwitch=true;
 						WhileGernal=true;
 						whileRGD=true;
 						RecpGernalSwitWhil=true;
@@ -2938,7 +3224,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Gernal Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Gernal Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 					for(int i=0; i<=15 ; i++)
 					{
 						System.out.println();
@@ -2952,6 +3238,13 @@ public class MainClass
 					}
 					else if(RGU==2)
 					{
+						WhileGernal=true;
+						whileRGU=true;
+						RecpGernalSwitWhil=true;
+					}
+					else if(RGU==3)
+					{
+						RSwitch=true;
 						WhileGernal=true;
 						whileRGU=true;
 						RecpGernalSwitWhil=true;
@@ -3004,7 +3297,6 @@ public class MainClass
 			{
 				System.out.println();
 			}
-			REPSwitch=true;
 			Operationreceptionist HOD = new Operationreceptionist();
 			System.out.println("Enter Your Password (Operation Department)");
 			int Password=input.nextInt();
@@ -3067,7 +3359,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Operation Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Operation Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 					for(int i=0; i<=15 ; i++)
 					{
 						System.out.println();
@@ -3081,6 +3373,13 @@ public class MainClass
 					}
 					else if(HODI==2)
 					{
+						whileHOI=true;
+						WhileOperation=true;
+						HOperationWhileSwitch=true;
+					}
+					else if(HODI==3)
+					{
+						RSwitch=true;
 						whileHOI=true;
 						WhileOperation=true;
 						HOperationWhileSwitch=true;
@@ -3116,7 +3415,7 @@ public class MainClass
 					{
 						System.out.println();
 					}
-				System.out.println("Press 1 For Gernal Menu & Press 2 For Main menu");
+				System.out.println("Press 1 For Gernal Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 				for(int i=0; i<=15 ; i++)
 				{
 					System.out.println();
@@ -3132,6 +3431,13 @@ public class MainClass
 				{
 					WhileOperation=true;
 					whilHOV=true;
+					HOperationWhileSwitch=true;
+				}
+				else if(SVO==3)
+				{
+					RSwitch=true;
+					whilHOV=true;
+					WhileOperation=true;
 					HOperationWhileSwitch=true;
 				}
 				else
@@ -3202,7 +3508,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Operation Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Operation Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 					for(int i=0; i<=15 ; i++)
 					{
 						System.out.println();
@@ -3216,6 +3522,13 @@ public class MainClass
 					}
 					else if(ROI==2)
 					{
+						WhileOperation=true;
+						whileROI=true;
+						RecpOperationSwitWhil=true;
+					}
+					else if(ROI==3)
+					{
+						RSwitch=true;
 						WhileOperation=true;
 						whileROI=true;
 						RecpOperationSwitWhil=true;
@@ -3252,7 +3565,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Operation Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Operation Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 					System.out.println("Press Enter To Continue....");
 					System.in.read();
 					for(int i=0; i<=40 ; i++)
@@ -3268,6 +3581,13 @@ public class MainClass
 					}
 					else if(ROV==2)
 					{
+						WhileOperation=true;
+						whileROV=true;
+						RecpOperationSwitWhil=true;
+					}
+					else if(ROV==3)
+					{
+						RSwitch=true;
 						WhileOperation=true;
 						whileROV=true;
 						RecpOperationSwitWhil=true;
@@ -3299,7 +3619,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Operation Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Operation Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 					for(int i=0; i<=15 ; i++)
 					{
 						System.out.println();
@@ -3313,6 +3633,13 @@ public class MainClass
 					}
 					else if(ROS==2)
 					{
+						WhileOperation=true;
+						whileROS=true;
+						RecpOperationSwitWhil=true;
+					}
+					else if(ROS==3)
+					{
+						RSwitch=true;
 						WhileOperation=true;
 						whileROS=true;
 						RecpOperationSwitWhil=true;
@@ -3350,7 +3677,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Operation Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Operation Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 					int ROD=input.nextInt();
 					if(ROD==1)
 					{
@@ -3360,6 +3687,13 @@ public class MainClass
 					}
 					else if(ROD==2)
 					{
+						WhileOperation=true;
+						whileROD=true;
+						RecpOperationSwitWhil=true;
+					}
+					else if(ROD==3)
+					{
+						RSwitch=true;
 						WhileOperation=true;
 						whileROD=true;
 						RecpOperationSwitWhil=true;
@@ -3396,7 +3730,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Operation Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Operation Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 					for(int i=0; i<=14 ; i++)
 					{
 						System.out.println();
@@ -3410,6 +3744,13 @@ public class MainClass
 					}
 					else if(ROU==2)
 					{
+						WhileOperation=true;
+						whileROU=true;
+						RecpOperationSwitWhil=true;
+					}
+					else if(ROU==3)
+					{
+						RSwitch=true;
 						WhileOperation=true;
 						whileROU=true;
 						RecpOperationSwitWhil=true;
@@ -3457,7 +3798,6 @@ public class MainClass
 		}
 		case 7://Receptionist switch
 		{
-			REPSwitch=true;
 			Rooms HOD = new Rooms();
 			for(int i=0; i<=40 ; i++)
 			{
@@ -3469,7 +3809,7 @@ public class MainClass
 				boolean HRoomsWhileSwitch=false;
 				while(HRoomsWhileSwitch==false)
 				{
-					System.out.println("Press Enter To Continue....");
+					System.out.println("\nPress Enter To Continue....");
 					System.in.read();
 					for(int i=0; i<=40 ; i++)
 					{
@@ -3508,7 +3848,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Rooms Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Rooms Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 					for(int i=0; i<=15 ; i++)
 					{
 						System.out.println();
@@ -3521,6 +3861,12 @@ public class MainClass
 					}
 					else if(HODI==2)
 					{
+						whileHOI=true;
+						HRoomsWhileSwitch=true;
+					}
+					else if(HODI==3)
+					{
+						RSwitch=true;
 						whileHOI=true;
 						HRoomsWhileSwitch=true;
 					}
@@ -3556,7 +3902,7 @@ public class MainClass
 					{
 						System.out.println();
 					}
-				System.out.println("Press 1 For Rooms Menu & Press 2 For Main menu");
+				System.out.println("Press 1 For Rooms Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 				for(int i=0; i<=15 ; i++)
 				{
 					System.out.println();
@@ -3569,6 +3915,12 @@ public class MainClass
 				}
 				else if(SVO==2)
 				{
+					whilHOV=true;
+					HRoomsWhileSwitch=true;
+				}
+				else if(SVO==3)
+				{
+					RSwitch=true;
 					whilHOV=true;
 					HRoomsWhileSwitch=true;
 				}
@@ -3605,7 +3957,6 @@ public class MainClass
 		
 		case 8://Receptionist switch
 		{
-			REPSwitch=true;
 			HospitalDoctors HD=new HospitalDoctors();
 			for(int i=0; i<=40 ; i++)
 			{
@@ -3653,7 +4004,7 @@ public class MainClass
 					{
 						System.out.println();
 					}
-				System.out.println("Press 1 For Hospital Doctor Menu & Press 2 For Main menu");
+				System.out.println("Press 1 For Hospital Doctor Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 				for(int i=0; i<=15 ; i++)
 				{
 					System.out.println();
@@ -3666,6 +4017,12 @@ public class MainClass
 				}
 				else if(HDI==2)
 				{
+					whileHDI=true;
+					RecpHDOSwitWhil=true;
+				}
+				else if(HDI==3)
+				{
+					RSwitch=true;
 					whileHDI=true;
 					RecpHDOSwitWhil=true;
 				}
@@ -3700,7 +4057,7 @@ public class MainClass
 					{
 						System.out.println();
 					}
-				System.out.println("Press 1 For Hospital Doctor Menu & Press 2 For Main menu");
+				System.out.println("Press 1 For Hospital Doctor Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 				for(int i=0; i<=15 ; i++)
 				{
 					System.out.println();
@@ -3713,6 +4070,12 @@ public class MainClass
 				}
 				else if(HDV==2)
 				{
+					whileHDV=true;
+					RecpHDOSwitWhil=true;
+				}
+				else if(HDV==3)
+				{
+					RSwitch=true;
 					whileHDV=true;
 					RecpHDOSwitWhil=true;
 				}
@@ -3749,7 +4112,7 @@ public class MainClass
 					{
 						System.out.println();
 					}
-				System.out.println("Press 1 For Hospital Doctors Menu & Press 2 For Main menu");
+				System.out.println("Press 1 For Hospital Doctors Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 				for(int i=0; i<=15 ; i++)
 				{
 					System.out.println();
@@ -3762,6 +4125,12 @@ public class MainClass
 				}
 				else if(HDS==2)
 				{
+					whileHDS=true;
+					RecpHDOSwitWhil=true;
+				}
+				else if(HDS==3)
+				{
+					RSwitch=true;
 					whileHDS=true;
 					RecpHDOSwitWhil=true;
 				}
@@ -3797,7 +4166,7 @@ public class MainClass
 					{
 						System.out.println();
 					}
-				System.out.println("Press 1 For Hospital Doctor Menu & Press 2 For Main menu");
+				System.out.println("Press 1 For Hospital Doctor Menu \nPress 2 For Receptionist Menu \nPress 3 2 For Main menu");
 				for(int i=0; i<=15 ; i++)
 				{
 					System.out.println();
@@ -3810,6 +4179,12 @@ public class MainClass
 				}
 				else if(HDD==2)
 				{
+					whileHDD=true;
+					RecpHDOSwitWhil=true;
+				}
+				else if(HDD==3)
+				{
+					RSwitch=true;
 					whileHDD=true;
 					RecpHDOSwitWhil=true;
 				}
@@ -3845,7 +4220,7 @@ public class MainClass
 					{
 						System.out.println();
 					}
-				System.out.println("Press 1 For Hospital Doctors Menu & Press 2 For Main menu");
+				System.out.println("Press 1 For Hospital Doctors Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 				for(int i=0; i<=15 ; i++)
 				{
 					System.out.println();
@@ -3858,6 +4233,12 @@ public class MainClass
 				}
 				else if(HDU==2)
 				{
+					whileHDU=true;
+					RecpHDOSwitWhil=true;
+				}
+				else if(HDU==3)
+				{
+					RSwitch=true;
 					whileHDU=true;
 					RecpHDOSwitWhil=true;
 				}
@@ -3896,7 +4277,6 @@ public class MainClass
 			{
 				System.out.println();
 			}
-			REPSwitch=true;
 			HospitalNurses HN=new HospitalNurses();
 			System.out.println("Welcome Receptionists Please Enter Your Password");
 			int Password=input.nextInt();
@@ -3940,7 +4320,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Hospital Nurses Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Hospital Nurses Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 					for(int i=0; i<=15 ; i++)
 					{
 						System.out.println();
@@ -3953,6 +4333,12 @@ public class MainClass
 					}
 					else if(HNI==2)
 					{
+						whileHNI=true;
+						RecpHNOSwitWhil=true;
+					}
+					else if(HNI==3)
+					{
+						RSwitch=true;
 						whileHNI=true;
 						RecpHNOSwitWhil=true;
 					}
@@ -3987,7 +4373,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Hospital Nurses Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Hospital Nurses Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 					for(int i=0; i<=15 ; i++)
 					{
 						System.out.println();
@@ -4000,6 +4386,12 @@ public class MainClass
 					}
 					else if(HNV==2)
 					{
+						whileHNV=true;
+						RecpHNOSwitWhil=true;
+					}
+					else if(HNV==3)
+					{
+						RSwitch=true;
 						whileHNV=true;
 						RecpHNOSwitWhil=true;
 					}
@@ -4036,7 +4428,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Hospital Nurses Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Hospital Nurses Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 					for(int i=0; i<=15 ; i++)
 					{
 						System.out.println();
@@ -4049,6 +4441,12 @@ public class MainClass
 					}
 					else if(HNS==2)
 					{
+						whileHNS=true;
+						RecpHNOSwitWhil=true;
+					}
+					else if(HNS==3)
+					{
+						RSwitch=true;
 						whileHNS=true;
 						RecpHNOSwitWhil=true;
 					}
@@ -4084,7 +4482,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Hospital Nurses Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Hospital Nurses Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 					for(int i=0; i<=15 ; i++)
 					{
 						System.out.println();
@@ -4097,6 +4495,12 @@ public class MainClass
 					}
 					else if(HND==2)
 					{
+						whileHND=true;
+						RecpHNOSwitWhil=true;
+					}
+					else if(HND==3)
+					{
+						RSwitch=true;
 						whileHND=true;
 						RecpHNOSwitWhil=true;
 					}
@@ -4132,7 +4536,7 @@ public class MainClass
 						{
 							System.out.println();
 						}
-					System.out.println("Press 1 For Hospital Nurses Menu & Press 2 For Main menu");
+					System.out.println("Press 1 For Hospital Nurses Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 					for(int i=0; i<=15 ; i++)
 					{
 						System.out.println();
@@ -4145,6 +4549,12 @@ public class MainClass
 					}
 					else if(HNU==2)
 					{
+						whileHNU=true;
+						RecpHNOSwitWhil=true;
+					}
+					else if(HNU==3)
+					{
+						RSwitch=true;
 						whileHNU=true;
 						RecpHNOSwitWhil=true;
 					}
@@ -4183,7 +4593,6 @@ public class MainClass
 			{
 				System.out.println();
 			}
-			REPSwitch=true;
 			HospitalWorkers HW=new HospitalWorkers();
 			System.out.println("Welcome Receptionists Please Enter Your Password");
 			int Password=input.nextInt();
@@ -4227,7 +4636,7 @@ public class MainClass
 					{
 						System.out.println();
 					}
-				System.out.println("Press 1 For Hospital Workers Menu & Press 2 For Main menu");
+				System.out.println("Press 1 For Hospital Workers Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 				for(int i=0; i<=15 ; i++)
 				{
 					System.out.println();
@@ -4240,6 +4649,12 @@ public class MainClass
 				}
 				else if(HWI==2)
 				{
+					whileHWI=true;
+					RecpHWOSwitWhil=true;
+				}
+				else if(HWI==3)
+				{
+					RSwitch=true;
 					whileHWI=true;
 					RecpHWOSwitWhil=true;
 				}
@@ -4268,7 +4683,7 @@ public class MainClass
 					{
 						System.out.println();
 					}	
-				System.out.println("Press 1 For Hospital Workers Menu & Press 2 For Main menu");
+				System.out.println("Press 1 For Hospital Workers Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 				for(int i=0; i<=15 ; i++)
 				{
 					System.out.println();
@@ -4281,6 +4696,12 @@ public class MainClass
 				}
 				else if(HWV==2)
 				{
+					whileHWV=true;
+					RecpHWOSwitWhil=true;
+				}
+				else if(HWV==3)
+				{
+					RSwitch=true;
 					whileHWV=true;
 					RecpHWOSwitWhil=true;
 				}
@@ -4317,7 +4738,7 @@ public class MainClass
 					{
 						System.out.println();
 					}
-				System.out.println("Press 1 For Hospital Workers Menu & Press 2 For Main menu");
+				System.out.println("Press 1 For Hospital Workers Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 				for(int i=0; i<=15 ; i++)
 				{
 					System.out.println();
@@ -4330,6 +4751,12 @@ public class MainClass
 				}
 				else if(HWS==2)
 				{
+					whileHWS=true;
+					RecpHWOSwitWhil=true;
+				}
+				else if(HWS==3)
+				{
+					RSwitch=true;
 					whileHWS=true;
 					RecpHWOSwitWhil=true;
 				}
@@ -4365,7 +4792,7 @@ public class MainClass
 					{
 						System.out.println();
 					}
-				System.out.println("Press 1 For Hospital Workers Menu & Press 2 For Main menu");
+				System.out.println("Press 1 For Hospital Workers Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 				for(int i=0; i<=15 ; i++)
 				{
 					System.out.println();
@@ -4378,6 +4805,12 @@ public class MainClass
 				}
 				else if(HWD==2)
 				{
+					whileHWD=true;
+					RecpHWOSwitWhil=true;
+				}
+				else if(HWD==3)
+				{
+					RSwitch=true;
 					whileHWD=true;
 					RecpHWOSwitWhil=true;
 				}
@@ -4413,7 +4846,7 @@ public class MainClass
 					{
 						System.out.println();
 					}
-				System.out.println("Press 1 For Hospital Workers Menu & Press 2 For Main menu");
+				System.out.println("Press 1 For Hospital Workers Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 				for(int i=0; i<=15 ; i++)
 				{
 					System.out.println();
@@ -4426,6 +4859,12 @@ public class MainClass
 				}
 				else if(HWU==2)
 				{
+					whileHWU=true;
+					RecpHWOSwitWhil=true;
+				}
+				else if(HWU==3)
+				{
+					RSwitch=true;
 					whileHWU=true;
 					RecpHWOSwitWhil=true;
 				}
@@ -4464,7 +4903,6 @@ public class MainClass
 			{
 				System.out.println();
 			}
-			REPSwitch=true;
 			UtilityBill HU=new UtilityBill();
 			System.out.println("Welcome Receptionists Please Enter Your Password");
 			int Password=input.nextInt();
@@ -4527,7 +4965,7 @@ public class MainClass
 					{
 						System.out.println();
 					}
-				System.out.println("Press 1 For Hospital Utility Bills Menu & Press 2 For Main menu");
+				System.out.println("Press 1 For Hospital Utility Bills Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 				for(int i=0; i<=15 ; i++)
 				{
 					System.out.println();
@@ -4540,6 +4978,12 @@ public class MainClass
 				}
 				else if(HUI==2)
 				{
+					whileHUI=true;
+					RecpHUOSwitWhil=true;
+				}
+				else if(HUI==3)
+				{
+					RSwitch=true;
 					whileHUI=true;
 					RecpHUOSwitWhil=true;
 				}
@@ -4574,7 +5018,7 @@ public class MainClass
 					{
 						System.out.println();
 					}
-				System.out.println("Press 1 For Hospital Utility Bills Menu & Press 2 For Main menu");
+				System.out.println("Press 1 For Hospital Utility Bills Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 				for(int i=0; i<=15 ; i++)
 				{
 					System.out.println();
@@ -4587,6 +5031,12 @@ public class MainClass
 				}
 				else if(HUV==2)
 				{
+					whileHUV=true;
+					RecpHUOSwitWhil=true;
+				}
+				else if(HUV==3)
+				{
+					RSwitch=true;
 					whileHUV=true;
 					RecpHUOSwitWhil=true;
 				}
@@ -4623,7 +5073,7 @@ public class MainClass
 					{
 						System.out.println();
 					}
-				System.out.println("Press 1 For Hospital Utility Bills Menu & Press 2 For Main menu");
+				System.out.println("Press 1 For Hospital Utility Bills Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 				for(int i=0; i<=15 ; i++)
 				{
 					System.out.println();
@@ -4636,6 +5086,12 @@ public class MainClass
 				}
 				else if(HUS==2)
 				{
+					whileHUS=true;
+					RecpHUOSwitWhil=true;
+				}
+				else if(HUS==3)
+				{
+					RSwitch=true;
 					whileHUS=true;
 					RecpHUOSwitWhil=true;
 				}
@@ -4671,7 +5127,7 @@ public class MainClass
 					{
 						System.out.println();
 					}
-				System.out.println("Press 1 For Hospital Utility Bills Menu & Press 2 For Main menu");
+				System.out.println("Press 1 For Hospital Utility Bills Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 				for(int i=0; i<=15 ; i++)
 				{
 					System.out.println();
@@ -4684,6 +5140,12 @@ public class MainClass
 				}
 				else if(HUD==2)
 				{
+					whileHUD=true;
+					RecpHUOSwitWhil=true;
+				}
+				else if(HUD==3)
+				{
+					RSwitch=true;
 					whileHUD=true;
 					RecpHUOSwitWhil=true;
 				}
@@ -4719,7 +5181,7 @@ public class MainClass
 					{
 						System.out.println();
 					}
-				System.out.println("Press 1 For Hospital Utility Bills Menu & Press 2 For Main menu");
+				System.out.println("Press 1 For Hospital Utility Bills Menu \nPress 2 For Receptionist Menu \nPress 3 For Main menu");
 				for(int i=0; i<=15 ; i++)
 				{
 					System.out.println();
@@ -4732,6 +5194,12 @@ public class MainClass
 				}
 				else if(HUU==2)
 				{
+					whileHUU=true;
+					RecpHUOSwitWhil=true;
+				}
+				else if(HUU==3)
+				{
+					RSwitch=true;
 					whileHUU=true;
 					RecpHUOSwitWhil=true;
 				}
@@ -4759,9 +5227,15 @@ public class MainClass
 					System.out.println();
 				}
 				RecpHUOSwitWhil=false;
+				break;
 			}
 			}
 		    }
+			break;
+		}
+		case 12://Receptionist switch
+		{
+			RSwitch=true;
 			break;
 		}
 		default:
@@ -4773,11 +5247,13 @@ public class MainClass
 			{
 				System.out.println();
 			}
-			REPSwitch=false;
+			RSwitch=false;
+			break;
 		}
 		}
-         break;
+         //break;
 		}
+		
 		break;
 }
 		case 4://Main Switch
