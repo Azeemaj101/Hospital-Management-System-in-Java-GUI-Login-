@@ -74,7 +74,7 @@ public class Exit extends JFrame {
 				}
 		});
 		lbla.setVerticalAlignment(SwingConstants.BOTTOM);
-		lbla.setForeground(new Color(0, 0, 0));
+		lbla.setForeground(new Color(0, 255, 0));
 		lbla.setFont(new Font("Comic Sans MS", Font.BOLD, 16));
 		lbla.setBounds(768, 0, 24, 23);
 		contentPane.add(lbla);

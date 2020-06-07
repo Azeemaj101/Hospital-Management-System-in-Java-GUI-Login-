@@ -7,8 +7,6 @@ public class MainClass
 {
 	public static void main(String [] args) throws InterruptedException, IOException
 	{
-		Login Run=new Login();
-		Exit Ex=new Exit();
 		Scanner input=new Scanner(System.in);
 		HospitalManagementSystem obj=new HospitalManagementSystem();
 		LocalDateTime RuffTime=LocalDateTime.now();
@@ -16,7 +14,7 @@ public class MainClass
 		DateTimeFormatter NowTime=DateTimeFormatter.ofPattern("hh-mm-ss");
 		String TrueTime=RuffTime.format(NowTime);
 		String TrueDate=RuffTime.format(NowDate);
-		Run.main(args);
+		Login.main(args);
 		System.out.println("Continue....");
 		System.in.read();
 		System.in.read();
@@ -35,7 +33,7 @@ public class MainClass
 		System.out.println("\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\tDate:"+TrueDate);
 		System.out.println("\t\t\t\t\t\t\t\t\t\t\t\t\t\tTime:"+TrueTime);
 		System.in.read();
-		
+		Obj.close();
 		boolean HStart=false;
 		while(HStart==false)
 		{
@@ -6105,15 +6103,84 @@ public class MainClass
 		}
 		case 7://Main Switch
 		{
+			PathologyLab LB=new PathologyLab();
+			LabLogin.main(args);
 			for(int i=0; i<=40 ; i++)
 			{
 				System.out.println();
 			}
-			PathologyLab LB=new PathologyLab();
+			System.out.println("Default : \nUsername = Customer \nPassword = Customer ");
+			System.out.println("Press Enter To Continue....");
+			System.in.read();
+			if(LabLogin.a!=0)
+			{
+				LabLogin.a=0;
+				boolean whilCtr=false;
+				while(whilCtr==false)
+				{
+				for(int i=0; i<=40 ; i++)
+				{
+					System.out.println();
+				}
+				System.out.println("Enter Token Number");
+		    	String tokenID=input.next();
+		    	System.out.println("Enter Patient Name");
+		    	String patientName=input.next();
+		    	System.out.println("Enter Test Name");
+		    	String testName=input.next();
+		    	LB.setTokenID(tokenID);
+		    	LB.setPatientName(patientName);
+		    	LB.setTestName(testName);
+		    	LB.Uinsert();
+		    	LB.LabPament();
+				System.out.println("\n\n\n\n");
+				boolean whileHUI=false;
+				while(whileHUI==false)
+				{
+					System.out.println("Press Enter To Continue....");
+					System.in.read();
+					for(int i=0; i<=40 ; i++)
+					{
+						System.out.println();
+					}
+				System.out.println("Press 1 For Hospital LAB Menu & Press 2 For Main menu");
+				for(int i=0; i<=15 ; i++)
+				{
+					System.out.println();
+				}
+				int HUI=input.nextInt();
+				if(HUI==1)
+				{
+					TimeUnit.SECONDS.sleep(0);
+					whileHUI=true;
+				}
+				else if(HUI==2)
+				{
+					whileHUI=true;
+					whilCtr=true;
+				}
+				else
+				{
+					System.out.println("\n\n\n\n");
+					System.out.println("Press Right Key");
+					System.out.println("Press Enter To Continue....");
+					System.in.read();
+					for(int i=0; i<=40 ; i++)
+					{
+						System.out.println();
+					}
+				}
+				}
+			}
+			}
+			else if(LabLogin.b!=0)
+			{
+				LabLogin.b=0;
+			for(int i=0; i<=40 ; i++)
+			{
+				System.out.println();
+			}
 			LB.DisplayManager();
-			System.out.println("Dear Please Enter Your Password");
-			int Password=input.nextInt();
-			LB.LoginReceptionists(Password);
 			boolean whilPay=false;
 			while(whilPay==false)
 			{
@@ -6145,7 +6212,6 @@ public class MainClass
 		    	LB.setPatientName(patientName);
 		    	LB.setTestName(testName);
 		    	LB.Uinsert();
-		    	LB.LabPament();
 				System.out.println("\n\n\n\n");
 				boolean whileHUI=false;
 				while(whileHUI==false)
@@ -6391,16 +6457,90 @@ public class MainClass
 				break;
 			}
 			}
-		}
+		    }
+			}
+			else
+			{
+				System.out.println("Press Right Key");
+				System.out.println("Press Enter To Continue....");
+				System.in.read();
+				for(int i=0; i<=40 ; i++)
+				{
+					System.out.println();
+				}
+			}
 			break;
 		}
 		case 8:// Main Switch
 		{
+			Pharmacy PM=new Pharmacy();
 			for(int i=0; i<=40 ; i++)
 			{
 				System.out.println();
 			}
-			Pharmacy PM=new Pharmacy();
+			PharmacyLogin.main(args);
+			System.out.println("Default : \nUsername = Customer \nPassword = Customer ");
+			System.out.println("Press Enter To Continue....");
+			System.in.read();
+			if(PharmacyLogin.a!=0)
+			{
+				boolean whilCtr=false;
+				while(whilCtr==false)
+				{
+				for(int i=0; i<=40 ; i++)
+				{
+					System.out.println();
+				}
+				PM.MedicineBuy();
+				PM.MedicineBuy2();
+				PharmacyLogin.a=0;
+				boolean whileHUU=false;
+				while(whileHUU==false)
+				{
+					System.out.println("Press Enter To Continue....");
+					System.in.read();
+					for(int i=0; i<=40 ; i++)
+					{
+						System.out.println();
+					}
+				System.out.println("Press 1 For Hospital Pharmacy Menu & Press 2 For Main menu");
+				for(int i=0; i<=15 ; i++)
+				{
+					System.out.println();
+				}
+				int HUU=input.nextInt();
+				if(HUU==1)
+				{
+					TimeUnit.SECONDS.sleep(0);
+					whileHUU=true;
+				}
+				else if(HUU==2)
+				{
+					whileHUU=true;
+					whilCtr=true;
+				}
+				else
+				{
+					System.out.println("\n\n\n\n");
+					System.out.println("Press Right Key");
+					System.out.println("Press Enter To Continue....");
+					System.in.read();
+					for(int i=0; i<=40 ; i++)
+					{
+						System.out.println();
+					}
+				}
+				}
+			}
+			}
+			if(PharmacyLogin.b!=0)
+			{
+				PharmacyLogin.b=0;
+			for(int i=0; i<=40 ; i++)
+			{
+				System.out.println();
+			}
+			
 			PM.DisplayManager();
 			System.out.println("Dear Please Enter Your Password");
 			int Password=input.nextInt();
@@ -6413,7 +6553,6 @@ public class MainClass
 			System.out.println("Press 3 For Search Medicines  ");
 			System.out.println("Press 4 For Delete Medicines  ");
 			System.out.println("Press 5 For Update Medicines  ");
-			System.out.println("Press 6 For Buy    Medicines  ");
 			for(int i=0; i<=15 ; i++)
 			{
 				System.out.println();
@@ -6661,53 +6800,6 @@ public class MainClass
 				}
 				break;
 			}
-			case 6:
-			{
-				for(int i=0; i<=40 ; i++)
-				{
-					System.out.println();
-				}
-				PM.MedicineBuy();
-				PM.MedicineBuy2();
-				boolean whileHUU=false;
-				while(whileHUU==false)
-				{
-					System.out.println("Press Enter To Continue....");
-					System.in.read();
-					for(int i=0; i<=40 ; i++)
-					{
-						System.out.println();
-					}
-				System.out.println("Press 1 For Hospital Pharmacy Menu & Press 2 For Main menu");
-				for(int i=0; i<=15 ; i++)
-				{
-					System.out.println();
-				}
-				int HUU=input.nextInt();
-				if(HUU==1)
-				{
-					TimeUnit.SECONDS.sleep(0);
-					whileHUU=true;
-				}
-				else if(HUU==2)
-				{
-					whileHUU=true;
-					whilPay=true;
-				}
-				else
-				{
-					System.out.println("\n\n\n\n");
-					System.out.println("Press Right Key");
-					System.out.println("Press Enter To Continue....");
-					System.in.read();
-					for(int i=0; i<=40 ; i++)
-					{
-						System.out.println();
-					}
-				}
-				}
-				break;
-			}
 			default:
 			{
 				System.out.println("Press Right Key");
@@ -6721,18 +6813,30 @@ public class MainClass
 				break;
 			}
 			}
-		}
+		    }
+			}
+			else 
+			{
+				System.out.println("Press Right Key");
+				System.out.println("Press Enter To Continue....");
+				System.in.read();
+				for(int i=0; i<=40 ; i++)
+				{
+					System.out.println();
+				}
+			}
 			break;
 		}
+			
 		case 9:// Main Switch
 		{
-			VandingMechine VandiGUI=new VandingMechine();
 			LikeVendi PM=new LikeVendi();
-			VandiGUI.main(args);
+			VandingMechine.main(args);
 			for(int i=0; i<=40 ; i++)
 			{
 				System.out.println();
 			}
+			System.out.println("Default : \nUsername = Customer \nPassword = Customer ");
 			System.out.println("Press Enter To Continue....");
 			System.in.read();
 			if(VandingMechine.a!=0)
@@ -7080,7 +7184,7 @@ public class MainClass
 		}
 		case 10:
 		{
-			Ex.main(args);
+			Exit.main(args);
 			HStart=true;
 			break;
 		}
@@ -7100,8 +7204,9 @@ public class MainClass
 }
 		else 
 		{
-			Ex.main(args);
+			Exit.main(args);
 		}
+		input.close();
 	}
 	
 	}	
