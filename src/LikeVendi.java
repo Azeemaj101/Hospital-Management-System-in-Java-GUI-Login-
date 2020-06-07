@@ -6,30 +6,30 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Pharmacy extends HospitalManagementSystem
+public class LikeVendi extends HospitalManagementSystem
 {
-	private String [] MedicineName=new String[13];
-	private String [] TokenID=new String[13];
-	private String [] StockQuantity=new String[13];
-	String [] Price=new String[13];
+	private String [] FoodName=new String[70];
+	private String [] TokenID=new String[70];
+	private String [] StockQuantity=new String[70];
+	String [] Price=new String[70];
 	Scanner input1=new Scanner(System.in);
 	
 	public void DisplayManager()
 	{
-		System.out.println("Manager Name           (Pharmacy Manager) = Shayan Tahir");
-		System.out.println("Manager Contant Number (Pharmacy Manager) = 03244064060");
+		System.out.println("Manager Name           (Food Manager) = Shayan Tahir");
+		System.out.println("Manager Contant Number (Food Manager) = 03244064060");
 	}
 	public void SGPharmacy()
 	{
 		for(int i=0 ; i<=1 ; i++)
 		{
-			System.out.println(i+1+". Medicine ID Number");
+			System.out.println(i+1+". Food ID Number");
 			TokenID[i]=input1.next();
-			System.out.println(i+1+". Medicine Name");
-		    MedicineName[i]=input1.next();
-		    System.out.println(i+1+". Medicine Stock");
+			System.out.println(i+1+". Food Name");
+		    FoodName[i]=input1.next();
+		    System.out.println(i+1+". Food Stock");
 		    StockQuantity[i]=input1.next();
-		    System.out.println(i+1+". Medicine Price");
+		    System.out.println(i+1+". Food Price");
 		    Price[i]=input1.next();
 		}
     }
@@ -40,7 +40,7 @@ public class Pharmacy extends HospitalManagementSystem
 		int []tokenID=new int[70];
 		FileWriter PHFout;
 		BufferedWriter PHBout = null;
-	    PHFout=new FileWriter("Pharmacy.txt" ,true);
+	    PHFout=new FileWriter("Food.txt" ,true);
 	    PHBout=new BufferedWriter(PHFout);
 	    
 	    for(int i=0 ; i<=1 ; i++)
@@ -48,22 +48,22 @@ public class Pharmacy extends HospitalManagementSystem
 	    tokenID[i]=Integer.parseInt(this.TokenID[i]);
 	    stockQuantity[i]=Integer.parseInt(this.StockQuantity[i]);
 	    price[i]=Integer.parseInt(this.Price[i]);
-	    PHFout.write("\n"+tokenID[i]+" "+ stockQuantity[i] + " " + price[i]+ " " +MedicineName[i]);
+	    PHFout.write("\n"+tokenID[i]+" "+ stockQuantity[i] + " " + price[i]+ " " +FoodName[i]);
 		}
 	    PHBout.close();
 	    PHFout.close();
 	}
 
-	public void MedicineBuy() throws IOException
+	public void FoodBuy() throws IOException
 	{
 		int [] Token =new int[100];
 		int [] stock=new int[100];
 		long [] price=new long[100];
-		String [] MedicineName=new String[100];
+		String [] FoodName=new String[100];
 		int i=0;
 		FileReader phFin;
 		BufferedReader phBin = null;
-		File phfile=new File("Pharmacy.txt");
+		File phfile=new File("Food.txt");
 		phFin=new FileReader(phfile);
 		phBin=new BufferedReader(phFin);
 		Scanner Obj=new Scanner(phBin);
@@ -72,9 +72,9 @@ public class Pharmacy extends HospitalManagementSystem
 	    	Token[i]=Obj.nextInt();
 	    	stock[i]=Obj.nextInt();
 	    	price[i]=Obj.nextInt();
-	    	MedicineName[i]=Obj.next();
-	    	System.out.println("Medicine    Name  is = "+MedicineName[i] 
-	    			        +"\nToken ID of Medicine = "+Token[i]
+	    	FoodName[i]=Obj.next();
+	    	System.out.println("Food        Name  is = "+FoodName[i] 
+	    			        +"\nToken ID of Food  is = "+Token[i]
 	    			        +"\nRemaining Stock   is = "+stock[i]
 	    			        +"\nPrice             is = "+ price[i]+"\n\n");
 	    	i++;
@@ -82,19 +82,19 @@ public class Pharmacy extends HospitalManagementSystem
 	    phFin.close();
 	    phBin.close();
 	}
-	public void MedicineBuy2() throws IOException
+	public void FoodBuy2() throws IOException
 	{
 		int [] Token =new int[100];
 		int [] stock=new int[100];
 		long [] price=new long[100];
-		String [] MedicineName=new String[100];
-   	    File Rfile=new File("Pharmacy.txt");
+		String [] FoodName=new String[100];
+   	    File Rfile=new File("Food.txt");
      	FileReader Fin=new FileReader(Rfile);
     	BufferedReader Bin=new BufferedReader(Fin);
     	File Pfile2=new File("AddTo.txt");
    	    FileWriter PFout =new FileWriter(Pfile2); 
    	    BufferedWriter PBout=new BufferedWriter(PFout);
-	    System.out.println("Please Enter Token ID of Medicine");
+	    System.out.println("Please Enter Token ID of Food");
 	    int Med=input1.nextInt();
 	    int i2=0;
 	    Scanner PObj=new Scanner(Bin);
@@ -103,11 +103,11 @@ public class Pharmacy extends HospitalManagementSystem
 	    	Token[i2]=PObj.nextInt();
 	    	stock[i2]=PObj.nextInt();
 	    	price[i2]=PObj.nextInt();
-	    	MedicineName[i2]=PObj.next();
+	    	FoodName[i2]=PObj.next();
 	    if(Token[i2]==Med)
 		{
-	    	System.out.println("Medicine    Name  is = "+MedicineName[i2] 
-	    			        +"\nToken ID of Medicine = "+Token[i2]
+	    	System.out.println("Food        Name  is = "+FoodName[i2] 
+	    			        +"\nToken ID of Food  is = "+Token[i2]
 	    			        +"\nRemaining Stock   is = "+stock[i2]
 	    			        +"\nPrice             is = "+ price[i2]+"\n\n");
 	    	System.out.println("Your Quantity");
@@ -115,7 +115,7 @@ public class Pharmacy extends HospitalManagementSystem
 	    	if(stock[i2]>Quan && Quan>0)
 	    	{
 	    		long Bill=price[i2]*Quan;
-	    		System.out.println("Medicine's Bill is ="+Bill);
+	    		System.out.println("Food's Bill is ="+Bill);
 	    		int i1=0;
 	    	    long Money=0;
 	    	 	FileReader MFin;
@@ -142,24 +142,24 @@ public class Pharmacy extends HospitalManagementSystem
 	     	    int z=0;
 	     	   int Stock=stock[i2]-Quan;
 	     	    System.out.println("Payment Done");
-	     	   System.out.println("Medicine    Name  is = "+MedicineName[i2] 
-   			                   +"\nToken ID of Medicine = "+Token[i2]
+	     	   System.out.println("Food        Name  is = "+FoodName[i2] 
+   			                   +"\nToken ID of Food  is = "+Token[i2]
    			                   +"\nRemaining Stock   is = "+Stock
    			                   +"\nPrice             is = "+ price[i2]+"\n\n");
 	     	    long RemQ[]=new long[100];
 	     	    RemQ[z]=stock[i2]-Quan;
-	   	    	PBout.write("\n"+Token[i2]+" "+ RemQ[z] + " " + price[i2]+ " " +MedicineName[i2]);
+	   	    	PBout.write("\n"+Token[i2]+" "+ RemQ[z] + " " + price[i2]+ " " +FoodName[i2]);
 	   	    	z++;
 	   	    }
 	    	else
 	    	{
-	    		PBout.write("\n"+Token[i2]+" "+ stock[i2] + " " + price[i2]+ " " +MedicineName[i2]);
+	    		PBout.write("\n"+Token[i2]+" "+ stock[i2] + " " + price[i2]+ " " +FoodName[i2]);
 	    	}
 	   	   
 	    	}
 	    else
    	    {
-   	    	PBout.write("\n"+Token[i2]+" "+ stock[i2] + " " + price[i2]+ " " +MedicineName[i2]);
+   	    	PBout.write("\n"+Token[i2]+" "+ stock[i2] + " " + price[i2]+ " " +FoodName[i2]);
    	    }
 	    i2++;
 	    }
@@ -172,14 +172,14 @@ public class Pharmacy extends HospitalManagementSystem
 	    
 	    
 	}
-	void MedicineUpdate(int Find)throws IOException
+	void FoodUpdate(int Find)throws IOException
 	{
 		int [] Token =new int[100];
 		int [] stock=new int[100];
 		long [] price=new long[100];
-		String [] MedicineName=new String[100];
+		String [] FoodName=new String[100];
 		int i=0;
-	    File file=new File("Pharmacy.txt");
+	    File file=new File("Food.txt");
 	    FileReader Fin=new FileReader(file);
 	    BufferedReader Bin=new BufferedReader(Fin);
 	    File file1=new File("Addo.txt");
@@ -192,22 +192,22 @@ public class Pharmacy extends HospitalManagementSystem
 	    	Token[i]=Obj.nextInt();
 	    	stock[i]=Obj.nextInt();
 	    	price[i]=Obj.nextInt();
-	    	MedicineName[i]=Obj.next();
+	    	FoodName[i]=Obj.next();
 	    if(Token[i]==Find)
 	    {
-	    	System.out.println(i+1+". Medicine ID Number");
+	    	System.out.println(i+1+". Food ID Number");
 			Token[i]=input1.nextInt();
-			System.out.println(i+1+". Medicine Name");
-		    MedicineName[i]=input1.next();
-		    System.out.println(i+1+". Medicine Stock");
+			System.out.println(i+1+". Food Name");
+		    FoodName[i]=input1.next();
+		    System.out.println(i+1+". Food Stock");
 		    stock[i]=input1.nextInt();
-		    System.out.println(i+1+". Medicine Price");
+		    System.out.println(i+1+". Food Price");
 		    price[i]=input1.nextInt();
-	    	Bout.write("\n"+Token[i]+" "+ stock[i] + " " + price[i]+ " " +MedicineName[i]); 
+	    	Bout.write("\n"+Token[i]+" "+ stock[i] + " " + price[i]+ " " +FoodName[i]); 
 	    }
 	    else
 	    {
-	    	Bout.write("\n"+Token[i]+" "+ stock[i] + " " + price[i]+ " " +MedicineName[i]);
+	    	Bout.write("\n"+Token[i]+" "+ stock[i] + " " + price[i]+ " " +FoodName[i]);
 	    }
 	    i++;
 	    }
@@ -217,14 +217,14 @@ public class Pharmacy extends HospitalManagementSystem
 	    file1.renameTo(file);
 	    Obj.close();
 	}
-	void MedicineDelete(int Find)throws IOException
+	void FoodDelete(int Find)throws IOException
 	{
 		int [] Token =new int[100];
 		int [] stock=new int[100];
 		long [] price=new long[100];
-		String [] MedicineName=new String[100];
+		String [] FoodName=new String[100];
 		int i=0;
-	    File file=new File("Pharmacy.txt");
+	    File file=new File("Food.txt");
 	    FileReader Fin=new FileReader(file);
 	    BufferedReader Bin=new BufferedReader(Fin);
 	    File file1=new File("Addo.txt");
@@ -237,10 +237,10 @@ public class Pharmacy extends HospitalManagementSystem
 	    	Token[i]=Obj.nextInt();
 	    	stock[i]=Obj.nextInt();
 	    	price[i]=Obj.nextInt();
-	    	MedicineName[i]=Obj.next();
+	    	FoodName[i]=Obj.next();
 	    if(Token[i]!=Find)
 	    {
-	    	Bout.write("\n"+Token[i]+" "+ stock[i] + " " + price[i]+ " " +MedicineName[i]); 
+	    	Bout.write("\n"+Token[i]+" "+ stock[i] + " " + price[i]+ " " +FoodName[i]); 
 	    }
 	    i++;
 	    }
@@ -250,14 +250,14 @@ public class Pharmacy extends HospitalManagementSystem
 	    file1.renameTo(file);
 	    Obj.close();
 	}
-	void MedicineSearch(int Find)throws IOException
+	void FoodSearch(int Find)throws IOException
 	{
 		int [] Token =new int[100];
 		int [] stock=new int[100];
 		long [] price=new long[100];
-		String [] MedicineName=new String[100];
+		String [] FoodName=new String[100];
 		int i=0;
-	    File file=new File("Pharmacy.txt");
+	    File file=new File("Food.txt");
 	    FileReader Fin=new FileReader(file);
 	    BufferedReader Bin=new BufferedReader(Fin);
 	    Scanner Obj=new Scanner(Bin);
@@ -267,11 +267,11 @@ public class Pharmacy extends HospitalManagementSystem
 	    	Token[i]=Obj.nextInt();
 	    	stock[i]=Obj.nextInt();
 	    	price[i]=Obj.nextInt();
-	    	MedicineName[i]=Obj.next();
+	    	FoodName[i]=Obj.next();
 	    if(Token[i]==Find)
 	    {
-	    	System.out.println("Medicine    Name  is = "+MedicineName[i] 
-	    			        +"\nToken ID of Medicine = "+Token[i]
+	    	System.out.println("Food        Name  is = "+FoodName[i] 
+	    			        +"\nToken ID of Food  is = "+Token[i]
 	    			        +"\nRemaining Stock   is = "+stock[i]
 	    			        +"\nPrice             is = "+ price[i]+"\n\n");
 	    }
@@ -286,11 +286,11 @@ public class Pharmacy extends HospitalManagementSystem
 		int [] Token =new int[100];
 		int [] stock=new int[100];
 		long [] price=new long[100];
-		String [] MedicineName=new String[100];
+		String [] FoodName=new String[100];
 		int i=0;
 		FileReader Fin;
 		BufferedReader Bin = null;
-		Fin=new FileReader("Pharmacy.txt");
+		Fin=new FileReader("Food.txt");
 	    Bin=new BufferedReader(Fin);
 		Scanner Obj=new Scanner(Bin);
 	    while(Obj.hasNext())
@@ -298,9 +298,9 @@ public class Pharmacy extends HospitalManagementSystem
 	    	Token[i]=Obj.nextInt();
 	    	stock[i]=Obj.nextInt();
 	    	price[i]=Obj.nextInt();
-	    	MedicineName[i]=Obj.next();
-	    	System.out.println("Medicine    Name  is = "+MedicineName[i] 
-	    			        +"\nToken ID of Medicine = "+Token[i]
+	    	FoodName[i]=Obj.next();
+	    	System.out.println("Medicine    Name  is = "+FoodName[i] 
+	    			        +"\nToken ID of Food  is = "+Token[i]
 	    			        +"\nRemaining Stock   is = "+stock[i]
 	    			        +"\nPrice             is = "+ price[i]+"\n\n");
 	        i++;
@@ -309,50 +309,5 @@ public class Pharmacy extends HospitalManagementSystem
 	    Fin.close();
 	    Bin.close();
      }
-	public void LoginReceptionists(int Password) throws InterruptedException
-	{
-		boolean f=false;
-		int Recovery=0;
-		int Question=0;
-		int Forget=0;
-		while(f==false)
-		{
-			if(Password==1234 || Password==Forget)
-			{
-				System.out.println("Welcome Back Shayan Tahir (Accountent)");
-				System.out.print("Loading < ");
-				for(int i=0 ; i<=30 ; i++)
-				{
-					System.out.print("|");
-					Thread.sleep(125);
-				}
-				System.out.print(" >100%\n");
-				f=true;
-			}
-			else if(Recovery==1)
-			{
-				System.out.print("Enter Your Default Password Given By Admin\n");
-				Question=input1.nextInt();
-				if(Question==27659199)
-				{
-				System.out.print("Loading < ");
-				for(int i=0 ; i<=30 ; i++)
-				{
-					System.out.print("|");
-					Thread.sleep(125);
-				}
-				System.out.print(" >100%");
-				System.out.println("\nEnter Your New Password\n");
-				Password=input1.nextInt();
-				Password=Forget;
-				}
-			}
-			else
-			{
-				System.out.println("Wrong Password \nPress 1 For Recover your password");
-				Recovery=input1.nextInt();
-			}
-		}
-		}
 }
 

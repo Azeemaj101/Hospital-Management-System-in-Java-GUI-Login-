@@ -187,25 +187,25 @@ public class Login extends JFrame {
 			}
 			@Override
 			public void mouseEntered(MouseEvent e) {
-				panel_2.setBackground(new Color(30, 60, 60));
+				panel_2.setBackground(new Color(0, 101, 155));
 			}
 			@Override
 			public void mouseExited(MouseEvent e) {
-				panel_2.setBackground(new Color(47, 79, 79));
+				panel_2.setBackground(new Color(0, 191, 255));
 			}
 			
 			@Override
 			public void mousePressed(MouseEvent e) {
-				panel_2.setBackground(new Color(60, 80, 80));
+				panel_2.setBackground(new Color(0, 101, 155));
 			}
 			@Override
 			public void mouseReleased(MouseEvent e) {
-				panel_2.setBackground(new Color(30, 60, 60));
+				panel_2.setBackground(new Color(0, 191, 255));
 			}
 		});
 		panel_2.addFocusListener(new FocusAdapter() {
 		});
-		panel_2.setBackground(new Color(47, 79, 79));
+		panel_2.setBackground(new Color(0, 191, 255));
 		panel_2.setBounds(163, 303, 250, 63);
 		panel.add(panel_2);
 		panel_2.setLayout(null);
@@ -240,7 +240,7 @@ public class Login extends JFrame {
 				}
 		});
 		lblx.setVerticalAlignment(SwingConstants.BOTTOM);
-		lblx.setForeground(new Color(192, 192, 192));
+		lblx.setForeground(new Color(0, 255, 0));
 		lblx.setFont(new Font("Comic Sans MS", Font.BOLD, 16));
 		lblx.setHorizontalAlignment(SwingConstants.CENTER);
 		lblx.setBounds(576, 0, 20, 20);
@@ -253,10 +253,15 @@ public class Login extends JFrame {
 		panel.add(lbliconLogo);
 		lbliconLogo.setIcon(new ImageIcon(img_logo));
 		
-		lblLoginMessage.setFont(new Font("Times New Roman", Font.BOLD, 14));
-		lblLoginMessage.setForeground(new Color(178, 34, 34));
+		lblLoginMessage.setFont(new Font("Times New Roman", Font.BOLD, 16));
+		lblLoginMessage.setForeground(new Color(255, 255, 255));
 		lblLoginMessage.setBounds(163, 278, 250, 20);
 		panel.add(lblLoginMessage);
+		
+		JLabel lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\Azeem\\eclipse-workspace\\2Semester(HMS)Project\\Start.jpg"));
+		lblNewLabel_1.setBounds(0, 0, 596, 396);
+		panel.add(lblNewLabel_1);
 		setLocationRelativeTo(null);
 	}
 }

@@ -20,7 +20,7 @@ import javax.swing.border.TitledBorder;
 public class Exit extends JFrame {
 
 	private JPanel contentPane;
-	private Image img_Exit =new ImageIcon(Login.class.getResource("Exit.JPG")).getImage().getScaledInstance(670, 350, Image.SCALE_SMOOTH);
+	private Image img_Exit =new ImageIcon(VandingMechine.class.getResource("Exit.JPG")).getImage().getScaledInstance(670, 350, Image.SCALE_SMOOTH);
 	/**
 	 * Launch the application.
 	 */
@@ -85,7 +85,8 @@ public class Exit extends JFrame {
 		lblPic.setIcon(new ImageIcon(img_Exit));
 		contentPane.add(lblPic);
 		
-		JLabel lblNewLabel = new JLabel("Produce By : Muhammad Azeem");
+		JLabel lblNewLabel = new JLabel("Produced By : Muhammad Azeem");
+		lblNewLabel.setForeground(new Color(0, 255, 255));
 		lblNewLabel.setBorder(new TitledBorder(new EtchedBorder(EtchedBorder.LOWERED, new Color(255, 255, 255), new Color(160, 160, 160)), "", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 139, 139)));
 		lblNewLabel.setFont(new Font("Times New Roman", Font.BOLD, 14));
 		lblNewLabel.setBounds(578, 431, 214, 23);
@@ -99,5 +100,10 @@ public class Exit extends JFrame {
 		lblNewLabel_1.setHorizontalTextPosition(SwingConstants.CENTER);
 		lblNewLabel_1.setBounds(287, 9, 225, 57);
 		contentPane.add(lblNewLabel_1);
+		
+		JLabel lblNewLabel_2 = new JLabel("");
+		lblNewLabel_2.setIcon(new ImageIcon("C:\\Users\\Azeem\\eclipse-workspace\\2Semester(HMS)Project\\End.jpg"));
+		lblNewLabel_2.setBounds(0, 0, 792, 454);
+		contentPane.add(lblNewLabel_2);
 		}
 }

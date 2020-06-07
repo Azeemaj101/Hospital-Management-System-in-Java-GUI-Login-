@@ -7,7 +7,7 @@ public class MainClass
 {
 	public static void main(String [] args) throws InterruptedException, IOException
 	{
-		VandingMechine Run=new VandingMechine();
+		Login Run=new Login();
 		Exit Ex=new Exit();
 		Scanner input=new Scanner(System.in);
 		HospitalManagementSystem obj=new HospitalManagementSystem();
@@ -20,7 +20,7 @@ public class MainClass
 		System.out.println("Continue....");
 		System.in.read();
 		System.in.read();
-		if(VandingMechine.a != 0)
+		if(Login.a != 0)
 		{
 		FileReader Fout;
 		BufferedReader Bout = null;
@@ -43,15 +43,16 @@ public class MainClass
 			{
 				System.out.println();
 			}
-		System.out.println("\nPress 1   For Hospital       Information         ");
-		System.out.println("\nPress 2   For Hospital       Parking     System  ");
-		System.out.println("\nPress 3   For Receptionist   All                 ");
-		System.out.println("\nPress 4   For Hospital       Notice      Board   ");
-		System.out.println("\nPress 5   For Hospital       Salaries            ");
-		System.out.println("\nPress 6   For Hospital       Patients            ");
-		System.out.println("\nPress 7   For Hospital       Pathology   LAB     ");
-		System.out.println("\nPress 8   For Hospital       Pharmacy            ");
-		System.out.println("\nPress 9   For Hospital       EXITS               ");
+		System.out.println("\nPress 1   For Hospital       Information           ");
+		System.out.println("\nPress 2   For Hospital       Parking       System  ");
+		System.out.println("\nPress 3   For Receptionist   All                   ");
+		System.out.println("\nPress 4   For Hospital       Notice        Board   ");
+		System.out.println("\nPress 5   For Hospital       Salaries              ");
+		System.out.println("\nPress 6   For Hospital       Patients              ");
+		System.out.println("\nPress 7   For Hospital       Pathology     LAB     ");
+		System.out.println("\nPress 8   For Hospital       Pharmacy              ");
+		System.out.println("\nPress 9   For Hospital       Food (Vending Machine)");
+		System.out.println("\nPress 10  For Hospital       EXITS                 ");
 		for(int i=0; i<=10 ; i++)
 		{
 			System.out.println();
@@ -6723,7 +6724,361 @@ public class MainClass
 		}
 			break;
 		}
-		case 9:
+		case 9:// Main Switch
+		{
+			VandingMechine VandiGUI=new VandingMechine();
+			LikeVendi PM=new LikeVendi();
+			VandiGUI.main(args);
+			for(int i=0; i<=40 ; i++)
+			{
+				System.out.println();
+			}
+			System.out.println("Press Enter To Continue....");
+			System.in.read();
+			if(VandingMechine.a!=0)
+			{
+				boolean WhilCustomer=false;
+				while(WhilCustomer==false)
+				{
+				for(int i=0; i<=40 ; i++)
+				{
+					System.out.println();
+				}
+				PM.FoodBuy();
+				PM.FoodBuy2();
+				VandingMechine.a=0;
+				boolean whileHUU=false;
+				while(whileHUU==false)
+				{
+					System.out.println("Press Enter To Continue....");
+					System.in.read();
+					for(int i=0; i<=40 ; i++)
+					{
+						System.out.println();
+					}
+				System.out.println("Press 1 For Hospital Food Menu & Press 2 For Main menu");
+				for(int i=0; i<=15 ; i++)
+				{
+					System.out.println();
+				}
+				int HUU=input.nextInt();
+				if(HUU==1)
+				{
+					TimeUnit.SECONDS.sleep(0);
+					whileHUU=true;
+				}
+				else if(HUU==2)
+				{
+					WhilCustomer=true;
+					whileHUU=true;
+				}
+				else
+				{
+					System.out.println("\n\n\n\n");
+					System.out.println("Press Right Key");
+					System.out.println("Press Enter To Continue....");
+					System.in.read();
+					for(int i=0; i<=40 ; i++)
+					{
+						System.out.println();
+					}
+				}
+				}
+			}
+			}
+			else if(VandingMechine.b!=0)
+			{
+			for(int i=0; i<=40 ; i++)
+			{
+				System.out.println();
+			}
+			PM.DisplayManager();
+			VandingMechine.b=0;
+			boolean whilPay=false;
+			while(whilPay==false)
+			{
+			System.out.println("Press 1 For ADD    Food  ");
+			System.out.println("Press 2 For View   Food  ");
+			System.out.println("Press 3 For Search Food  ");
+			System.out.println("Press 4 For Delete Food  ");
+			System.out.println("Press 5 For Update Food  ");
+			for(int i=0; i<=15 ; i++)
+			{
+				System.out.println();
+			}
+			int RecepHWOSwitch=input.nextInt();
+			switch(RecepHWOSwitch)
+			{
+			case 1:
+			{
+				for(int i=0; i<=40 ; i++)
+				{
+					System.out.println();
+				}
+				PM.SGPharmacy();
+				PM.PinsertNew();
+				System.out.println("\n\n\n\n");
+				boolean whileHUI=false;
+				while(whileHUI==false)
+				{
+					System.out.println("Press Enter To Continue....");
+					System.in.read();
+					for(int i=0; i<=40 ; i++)
+					{
+						System.out.println();
+					}
+				System.out.println("Press 1 For Hospital Food Menu & Press 2 For Main menu");
+				for(int i=0; i<=15 ; i++)
+				{
+					System.out.println();
+				}
+				int HUI=input.nextInt();
+				if(HUI==1)
+				{
+					TimeUnit.SECONDS.sleep(0);
+					whileHUI=true;
+				}
+				else if(HUI==2)
+				{
+					whileHUI=true;
+					whilPay=true;
+				}
+				else
+				{
+					System.out.println("\n\n\n\n");
+					System.out.println("Press Right Key");
+					System.out.println("Press Enter To Continue....");
+					System.in.read();
+					for(int i=0; i<=40 ; i++)
+					{
+						System.out.println();
+					}
+				}
+				}
+				break;
+			}
+			case 2:
+			{
+				for(int i=0; i<=40 ; i++)
+				{
+					System.out.println();
+				}
+				PM.Pview();
+				System.out.println("\n\n\n\n");
+				boolean whileHUV=false;
+				while(whileHUV==false)
+				{
+					System.out.println("Press Enter To Continue....");
+					System.in.read();
+					for(int i=0; i<=40 ; i++)
+					{
+						System.out.println();
+					}
+				System.out.println("Press 1 For Hospital Food Menu & Press 2 For Main menu");
+				for(int i=0; i<=15 ; i++)
+				{
+					System.out.println();
+				}
+				int HUV=input.nextInt();
+				if(HUV==1)
+				{
+					TimeUnit.SECONDS.sleep(0);
+					whileHUV=true;
+				}
+				else if(HUV==2)
+				{
+					whileHUV=true;
+					whilPay=true;
+				}
+				else
+				{
+					System.out.println("\n\n\n\n");
+					System.out.println("Press Right Key");
+					System.out.println("Press Enter To Continue....");
+					System.in.read();
+					for(int i=0; i<=40 ; i++)
+					{
+						System.out.println();
+					}
+				}
+				}
+				break;
+			}
+			case 3:
+			{
+				for(int i=0; i<=40 ; i++)
+				{
+					System.out.println();
+				}
+				System.out.println("Please Medicine ID");
+				int Find=input.nextInt();
+				PM.FoodSearch(Find);
+				System.out.println("\n\n\n\n");
+				boolean whileHUS=false;
+				while(whileHUS==false)
+				{
+					System.out.println("Press Enter To Continue....");
+					System.in.read();
+					for(int i=0; i<=40 ; i++)
+					{
+						System.out.println();
+					}
+				System.out.println("Press 1 For Hospital Food Menu & Press 2 For Main menu");
+				for(int i=0; i<=15 ; i++)
+				{
+					System.out.println();
+				}
+				int HUS=input.nextInt();
+				if(HUS==1)
+				{
+					TimeUnit.SECONDS.sleep(0);
+					whileHUS=true;
+				}
+				else if(HUS==2)
+				{
+					whileHUS=true;
+					whilPay=true;
+				}
+				else
+				{
+					System.out.println("\n\n\n\n");
+					System.out.println("Press Right Key");
+					System.out.println("Press Enter To Continue....");
+					System.in.read();
+					for(int i=0; i<=40 ; i++)
+					{
+						System.out.println();
+					}
+				}
+			}
+			break;
+			}
+			case 4:
+			{
+				for(int i=0; i<=40 ; i++)
+				{
+					System.out.println();
+				}
+				System.out.println("Please Enter Medicine ID");
+				int Find=input.nextInt();
+				PM.FoodDelete(Find);
+				boolean whileHUD=false;
+				while(whileHUD==false)
+				{
+					System.out.println("Press Enter To Continue....");
+					System.in.read();
+					for(int i=0; i<=40 ; i++)
+					{
+						System.out.println();
+					}
+				System.out.println("Press 1 For Hospital Food Menu & Press 2 For Main menu");
+				for(int i=0; i<=15 ; i++)
+				{
+					System.out.println();
+				}
+				int HUD=input.nextInt();
+				if(HUD==1)
+				{
+					TimeUnit.SECONDS.sleep(0);
+					whileHUD=true;
+				}
+				else if(HUD==2)
+				{
+					whileHUD=true;
+					whilPay=true;
+				}
+				else
+				{
+					System.out.println("\n\n\n\n");
+					System.out.println("Press Right Key");
+					System.out.println("Press Enter To Continue....");
+					System.in.read();
+					for(int i=0; i<=40 ; i++)
+					{
+						System.out.println();
+					}
+				}
+				}
+				break;
+			}
+			case 5:
+			{
+				for(int i=0; i<=40 ; i++)
+				{
+					System.out.println();
+				}
+				System.out.println("Please Enter Medicine ID");
+				int Find=input.nextInt();
+				PM.FoodUpdate(Find);
+				boolean whileHUU=false;
+				while(whileHUU==false)
+				{
+					System.out.println("Press Enter To Continue....");
+					System.in.read();
+					for(int i=0; i<=40 ; i++)
+					{
+						System.out.println();
+					}
+				System.out.println("Press 1 For Hospital Food Menu & Press 2 For Main menu");
+				for(int i=0; i<=15 ; i++)
+				{
+					System.out.println();
+				}
+				int HUU=input.nextInt();
+				if(HUU==1)
+				{
+					TimeUnit.SECONDS.sleep(0);
+					whileHUU=true;
+				}
+				else if(HUU==2)
+				{
+					whileHUU=true;
+					whilPay=true;
+				}
+				else
+				{
+					System.out.println("\n\n\n\n");
+					System.out.println("Press Right Key");
+					System.out.println("Press Enter To Continue....");
+					System.in.read();
+					for(int i=0; i<=40 ; i++)
+					{
+						System.out.println();
+					}
+				}
+				}
+				break;
+			}
+			
+			default:
+			{
+				System.out.println("Press Right Key");
+				System.out.println("Press Enter To Continue....");
+				System.in.read();
+				for(int i=0; i<=40 ; i++)
+				{
+					System.out.println();
+				}
+				whilPay=false;
+				break;
+			}
+			}
+		}
+		}
+			else 
+			{
+				
+				System.out.println("Press Right Key");
+				System.out.println("Press Enter To Continue....");
+				System.in.read();
+				for(int i=0; i<=40 ; i++)
+				{
+					System.out.println();
+				}
+			}
+			break;
+		}
+		case 10:
 		{
 			Ex.main(args);
 			HStart=true;

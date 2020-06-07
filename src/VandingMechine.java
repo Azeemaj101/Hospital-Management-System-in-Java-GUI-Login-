@@ -25,6 +25,7 @@ import java.awt.event.KeyEvent;
 import javax.swing.border.BevelBorder;
 import javax.swing.border.EtchedBorder;
 import javax.swing.border.MatteBorder;
+import java.awt.Cursor;
 public class VandingMechine extends JFrame {
     /**
 	 * 
@@ -34,14 +35,14 @@ public class VandingMechine extends JFrame {
 	 *
 	 */
 	private Image img_UserName =new ImageIcon(VandingMechine.class.getResource("UserName.JPG")).getImage().getScaledInstance(50, 40, Image.SCALE_SMOOTH);
-	private Image img_logo =new ImageIcon(VandingMechine.class.getResource("Logo.jpg")).getImage().getScaledInstance(220, 140, Image.SCALE_SMOOTH);
+	private Image img_logo =new ImageIcon(VandingMechine.class.getResource("Hospi.gif")).getImage().getScaledInstance(22, 14, Image.SCALE_SMOOTH);
     private Image img_Password =new ImageIcon(VandingMechine.class.getResource("Lock.jpg")).getImage().getScaledInstance(60, 40, Image.SCALE_SMOOTH);
     private Image img_Login =new ImageIcon(VandingMechine.class.getResource("Key.png")).getImage().getScaledInstance(90, 80, Image.SCALE_SMOOTH);
 	private JPanel contentPane;
 	private JTextField textUsername;
 	private JPasswordField txtPassword;
-	private JLabel lblLoginMessage = new JLabel("");
     static int a=0;
+    static int b=0;
 	/**
 	 * Launch the application.
 	 */
@@ -72,7 +73,7 @@ public class VandingMechine extends JFrame {
 		
 		JPanel panel = new JPanel();
 		panel.setBorder(new MatteBorder(1, 1, 1, 1, (Color) new Color(0, 0, 0)));
-		panel.setBackground(new Color(0, 139, 139));
+		panel.setBackground(new Color(220, 20, 60));
 		contentPane.add(panel, BorderLayout.CENTER);
 		panel.setLayout(null);
 		
@@ -172,44 +173,49 @@ public class VandingMechine extends JFrame {
 		panel_2.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				if(textUsername.getText().equals("Admin") && txtPassword.getText().equals("Admin"))
+				if(textUsername.getText().equals("Customer") && txtPassword.getText().equals("Customer"))
 				{
-					lblLoginMessage.setText("");
-					JOptionPane.showMessageDialog(null, "Login Successful");
+					JOptionPane.showMessageDialog(null, "Login Successful can, I help you");
 					VandingMechine.this.dispose();
 					a++;
+				}
+				else if(textUsername.getText().equals("Update") && txtPassword.getText().equals("Update"))
+				{
+					JOptionPane.showMessageDialog(null, "Login Successful Welcome Back Head");
+					VandingMechine.this.dispose();
+					b++;
 				}
 				else if(textUsername.getText().equals("") || textUsername.getText().equals("Username")
 						||txtPassword.getText().equals("")||txtPassword.getText().equals("Password"))
 				{
-					lblLoginMessage.setText("Please Input All Requirements!");
+					JOptionPane.showMessageDialog(null, "Please Input All Requirements!");
 				}
 				else
 				{
-					lblLoginMessage.setText("Username and Password didn't match");
+					JOptionPane.showMessageDialog(null, "Username and Password didn't match");
 				}
 			}
 			@Override
 			public void mouseEntered(MouseEvent e) {
-				panel_2.setBackground(new Color(30, 60, 60));
+				panel_2.setBackground(new Color(0, 0, 150));
 			}
 			@Override
 			public void mouseExited(MouseEvent e) {
-				panel_2.setBackground(new Color(47, 79, 79));
+				panel_2.setBackground(new Color(0, 0, 205));
 			}
 			
 			@Override
 			public void mousePressed(MouseEvent e) {
-				panel_2.setBackground(new Color(60, 80, 80));
+				panel_2.setBackground(new Color(150, 0, 0));
 			}
 			@Override
 			public void mouseReleased(MouseEvent e) {
-				panel_2.setBackground(new Color(30, 60, 60));
+				panel_2.setBackground(new Color(0, 0, 150));
 			}
 		});
 		panel_2.addFocusListener(new FocusAdapter() {
 		});
-		panel_2.setBackground(new Color(47, 79, 79));
+		panel_2.setBackground(new Color(0, 0, 205));
 		panel_2.setBounds(163, 303, 250, 63);
 		panel.add(panel_2);
 		panel_2.setLayout(null);
@@ -240,27 +246,31 @@ public class VandingMechine extends JFrame {
 			   lblx.setForeground(Color.RED);
 			}
 			public void mouseExited(MouseEvent e) {
-				   lblx.setForeground(Color.GREEN);
+				   lblx.setForeground(Color.BLUE);
 				}
+			@Override
+			public void mousePressed(MouseEvent e) {
+				lblx.setForeground(Color.BLUE);
+			}
+			@Override
+			public void mouseReleased(MouseEvent e) {
+				lblx.setForeground(Color.BLUE);
+			}
 		});
 		lblx.setVerticalAlignment(SwingConstants.BOTTOM);
-		lblx.setForeground(new Color(192, 192, 192));
+		lblx.setForeground(new Color(0, 0, 255));
 		lblx.setFont(new Font("Comic Sans MS", Font.BOLD, 16));
 		lblx.setHorizontalAlignment(SwingConstants.CENTER);
 		lblx.setBounds(576, 0, 20, 20);
 		panel.add(lblx);
 		
 		JLabel lbliconLogo = new JLabel("");
+		lbliconLogo.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
+		lbliconLogo.setIcon(new ImageIcon("C:\\Users\\Azeem\\eclipse-workspace\\2Semester(HMS)Project\\Vendi1.jpg"));
 		lbliconLogo.setBorder(new BevelBorder(BevelBorder.LOWERED, null, null, null, null));
 		lbliconLogo.setHorizontalAlignment(SwingConstants.CENTER);
-		lbliconLogo.setBounds(176, 28, 220, 126);
+		lbliconLogo.setBounds(0, 0, 596, 396);
 		panel.add(lbliconLogo);
-		lbliconLogo.setIcon(new ImageIcon(img_logo));
-		
-		lblLoginMessage.setFont(new Font("Times New Roman", Font.BOLD, 14));
-		lblLoginMessage.setForeground(new Color(178, 34, 34));
-		lblLoginMessage.setBounds(163, 278, 250, 20);
-		panel.add(lblLoginMessage);
 		setLocationRelativeTo(null);
 	}
 }
