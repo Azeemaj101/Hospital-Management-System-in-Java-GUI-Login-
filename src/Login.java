@@ -27,6 +27,10 @@ import javax.swing.border.EtchedBorder;
 import javax.swing.border.MatteBorder;
 public class Login extends JFrame {
     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	/**
 	 *
 	 */
 	private Image img_UserName =new ImageIcon(Login.class.getResource("UserName.JPG")).getImage().getScaledInstance(50, 40, Image.SCALE_SMOOTH);
@@ -123,6 +127,7 @@ public class Login extends JFrame {
 		txtPassword = new JPasswordField();
 		txtPassword.setForeground(new Color(0, 0, 0));
 		txtPassword.addFocusListener(new FocusAdapter() {
+			@SuppressWarnings("deprecation")
 			@Override
 			public void focusGained(FocusEvent e) {
 				if(txtPassword.getText().equals("Password"))
@@ -135,6 +140,7 @@ public class Login extends JFrame {
 					txtPassword.selectAll();
 				}
 			}
+			@SuppressWarnings("deprecation")
 			@Override
 			public void focusLost(FocusEvent e) {
 				if(txtPassword.getText().equals(""))
@@ -166,6 +172,7 @@ public class Login extends JFrame {
 			}
 		});
 		panel_2.addMouseListener(new MouseAdapter() {
+			@SuppressWarnings("deprecation")
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				if(textUsername.getText().equals("Admin") && txtPassword.getText().equals("Admin"))

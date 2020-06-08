@@ -81,6 +81,7 @@ public class Pharmacy extends HospitalManagementSystem
 	    }
 	    phFin.close();
 	    phBin.close();
+	    Obj.close();
 	}
 	public void MedicineBuy2() throws IOException
 	{
@@ -116,8 +117,8 @@ public class Pharmacy extends HospitalManagementSystem
 	    	{
 	    		long Bill=price[i2]*Quan;
 	    		System.out.println("Medicine's Bill is ="+Bill);
+	    		long Money=0;
 	    		int i1=0;
-	    	    long Money=0;
 	    	 	FileReader MFin;
 	    	 	BufferedReader MBin = null;
 	    	 	MFin=new FileReader("HospitalBANK.txt");
@@ -186,7 +187,6 @@ public class Pharmacy extends HospitalManagementSystem
 	    FileWriter Fout =new FileWriter(file1); 
 	    BufferedWriter Bout=new BufferedWriter(Fout);
 	    Scanner Obj=new Scanner(Bin);
-	    Scanner INPUT=new Scanner(System.in);
 	    while(Obj.hasNext())
 	    {
 	    	Token[i]=Obj.nextInt();
@@ -231,7 +231,6 @@ public class Pharmacy extends HospitalManagementSystem
 	    FileWriter Fout =new FileWriter(file1); 
 	    BufferedWriter Bout=new BufferedWriter(Fout);
 	    Scanner Obj=new Scanner(Bin);
-	    Scanner INPUT=new Scanner(System.in);
 	    while(Obj.hasNext())
 	    {
 	    	Token[i]=Obj.nextInt();
@@ -261,7 +260,6 @@ public class Pharmacy extends HospitalManagementSystem
 	    FileReader Fin=new FileReader(file);
 	    BufferedReader Bin=new BufferedReader(Fin);
 	    Scanner Obj=new Scanner(Bin);
-	    Scanner INPUT=new Scanner(System.in);
 	    while(Obj.hasNext())
 	    {
 	    	Token[i]=Obj.nextInt();

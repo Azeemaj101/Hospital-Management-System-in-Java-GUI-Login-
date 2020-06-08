@@ -35,8 +35,7 @@ public class VandingMechine extends JFrame {
 	 *
 	 */
 	private Image img_UserName =new ImageIcon(VandingMechine.class.getResource("UserName.JPG")).getImage().getScaledInstance(50, 40, Image.SCALE_SMOOTH);
-	private Image img_logo =new ImageIcon(VandingMechine.class.getResource("Hospi.gif")).getImage().getScaledInstance(22, 14, Image.SCALE_SMOOTH);
-    private Image img_Password =new ImageIcon(VandingMechine.class.getResource("Lock.jpg")).getImage().getScaledInstance(60, 40, Image.SCALE_SMOOTH);
+	private Image img_Password =new ImageIcon(VandingMechine.class.getResource("Lock.jpg")).getImage().getScaledInstance(60, 40, Image.SCALE_SMOOTH);
     private Image img_Login =new ImageIcon(VandingMechine.class.getResource("Key.png")).getImage().getScaledInstance(90, 80, Image.SCALE_SMOOTH);
 	private JPanel contentPane;
 	private JTextField textUsername;
@@ -128,6 +127,7 @@ public class VandingMechine extends JFrame {
 		txtPassword = new JPasswordField();
 		txtPassword.setForeground(new Color(0, 0, 0));
 		txtPassword.addFocusListener(new FocusAdapter() {
+			@SuppressWarnings("deprecation")
 			@Override
 			public void focusGained(FocusEvent e) {
 				if(txtPassword.getText().equals("Password"))
@@ -140,6 +140,7 @@ public class VandingMechine extends JFrame {
 					txtPassword.selectAll();
 				}
 			}
+			@SuppressWarnings("deprecation")
 			@Override
 			public void focusLost(FocusEvent e) {
 				if(txtPassword.getText().equals(""))
@@ -171,6 +172,7 @@ public class VandingMechine extends JFrame {
 			}
 		});
 		panel_2.addMouseListener(new MouseAdapter() {
+			@SuppressWarnings("deprecation")
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				if(textUsername.getText().equals("Customer") && txtPassword.getText().equals("Customer"))

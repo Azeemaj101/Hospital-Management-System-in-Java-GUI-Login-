@@ -81,6 +81,7 @@ public class LikeVendi extends HospitalManagementSystem
 	    }
 	    phFin.close();
 	    phBin.close();
+	    Obj.close();
 	}
 	public void FoodBuy2() throws IOException
 	{

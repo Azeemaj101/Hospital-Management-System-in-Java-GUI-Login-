@@ -19,6 +19,10 @@ import javax.swing.border.TitledBorder;
 
 public class Exit extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private Image img_Exit =new ImageIcon(VandingMechine.class.getResource("Exit.JPG")).getImage().getScaledInstance(670, 350, Image.SCALE_SMOOTH);
 	/**

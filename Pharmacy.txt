@@ -1,7 +1,7 @@
 
 1 999 50 Diuretics
 1 998 60 Erythropoietin
-3 1000 40 Hepatitis-B-vaccination
+3 500 40 Hepatitis-B-vaccination
 4 1000 200 Iron-supplements
 5 1000 300 Phosphate-binders
 6 1000 250 Sodium-Bicarbonate
