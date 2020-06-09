@@ -12,6 +12,7 @@ public abstract class CancerDepartment implements ReceptionistR ,PatientPayment
 {
 	private String DeptBlockNumber;
 	private String HeadName;
+	Scanner input=new Scanner(System.in); 
 	
 	public void setHeadName(String headName) 
 	{
@@ -27,7 +28,7 @@ public abstract class CancerDepartment implements ReceptionistR ,PatientPayment
 		int Recovery=0;
 		int Question=0;
 		int Forget=0;
-		Scanner input=new Scanner(System.in); 
+		
 		while(f==false)
 		{
 			if(Password==1234 || Password==Forget)
@@ -233,7 +234,6 @@ class Cancerreceptionist extends CancerDepartment
 	    FileWriter Fout =new FileWriter(file1); 
 	    BufferedWriter Bout=new BufferedWriter(Fout);
 	    Scanner Obj=new Scanner(Bin);
-	    Scanner INPUT=new Scanner(System.in);
 	    while(Obj.hasNext())
 	    {
 	    	DoctorID[i]=Obj.nextInt();

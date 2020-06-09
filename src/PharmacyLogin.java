@@ -1,7 +1,6 @@
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
-
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -11,10 +10,8 @@ import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-
 import java.awt.Font;
 import java.awt.Image;
-
 import javax.swing.SwingConstants;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -22,15 +19,11 @@ import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import javax.swing.border.BevelBorder;
-import javax.swing.border.EtchedBorder;
 import javax.swing.border.MatteBorder;
+
 public class PharmacyLogin extends JFrame {
-    /**
-	 *
-	 */
+	private static final long serialVersionUID = 1L;
 	private Image img_UserName =new ImageIcon(PharmacyLogin.class.getResource("UserName.JPG")).getImage().getScaledInstance(50, 40, Image.SCALE_SMOOTH);
-	private Image img_logo =new ImageIcon(PharmacyLogin.class.getResource("Logo.jpg")).getImage().getScaledInstance(220, 140, Image.SCALE_SMOOTH);
     private Image img_Password =new ImageIcon(PharmacyLogin.class.getResource("Lock.jpg")).getImage().getScaledInstance(60, 40, Image.SCALE_SMOOTH);
     private Image img_Login =new ImageIcon(PharmacyLogin.class.getResource("Key.png")).getImage().getScaledInstance(90, 80, Image.SCALE_SMOOTH);
 	private JPanel contentPane;
@@ -124,6 +117,7 @@ public class PharmacyLogin extends JFrame {
 		txtPassword = new JPasswordField();
 		txtPassword.setForeground(new Color(0, 0, 0));
 		txtPassword.addFocusListener(new FocusAdapter() {
+			@SuppressWarnings("deprecation")
 			@Override
 			public void focusGained(FocusEvent e) {
 				if(txtPassword.getText().equals("Password"))
@@ -136,6 +130,7 @@ public class PharmacyLogin extends JFrame {
 					txtPassword.selectAll();
 				}
 			}
+			@SuppressWarnings("deprecation")
 			@Override
 			public void focusLost(FocusEvent e) {
 				if(txtPassword.getText().equals(""))
@@ -167,6 +162,7 @@ public class PharmacyLogin extends JFrame {
 			}
 		});
 		panel_2.addMouseListener(new MouseAdapter() {
+			@SuppressWarnings("deprecation")
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				if(textUsername.getText().equals("Customer") && txtPassword.getText().equals("Customer"))

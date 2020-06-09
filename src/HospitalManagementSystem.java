@@ -10,6 +10,8 @@ public class HospitalManagementSystem
 	private String Location;
 	private String HospitalNumber;
 	private int Forget;
+	Scanner input=new Scanner(System.in);
+	
 	public void setHospitalName(String hospitalName) {
 		HospitalName = hospitalName;
 	}
@@ -23,8 +25,7 @@ public class HospitalManagementSystem
 	{
 		boolean f=false;
 		int Recovery=0;
-		int Question=0;
-		Scanner input=new Scanner(System.in); 
+		int Question=0; 
 		while(f==false)
 		{
 			if(Password==1234 || Password==Forget)
@@ -92,5 +93,8 @@ public class HospitalManagementSystem
 	    	
 	    	System.out.println("Hospital Name is = "+HName +"\nHospital Contact Number is = "+Number+"\nHospital Location = "+HLocation);
 	    }
+	    Fout.close();
+	    Bout.close();
+	    Obj.close();
 	    }
 }

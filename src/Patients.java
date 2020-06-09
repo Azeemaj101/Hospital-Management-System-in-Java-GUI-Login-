@@ -4,8 +4,6 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 public class Patients extends HospitalManagementSystem implements PatientPayment
 {
@@ -115,7 +113,6 @@ public class Patients extends HospitalManagementSystem implements PatientPayment
 	}
 	public void PatientPament(int TBill) throws IOException, InterruptedException
 	{
-		    int i=0;
 	    	long Money=0;
 	 	    FileReader MFin;
 	 		BufferedReader MBin = null;
@@ -125,7 +122,6 @@ public class Patients extends HospitalManagementSystem implements PatientPayment
 	 	    while(MObj.hasNext())
 	 	    {
 	 	    	Money=MObj.nextLong();
-	 	    	i++;
 	 	    }
 	    	if(TBill>0)
 	    	{
@@ -290,7 +286,6 @@ public class Patients extends HospitalManagementSystem implements PatientPayment
 	    FileWriter Fout =new FileWriter(file1); 
 	    BufferedWriter Bout=new BufferedWriter(Fout);
 	    Scanner Obj=new Scanner(Bin);
-	    Scanner INPUT=new Scanner(System.in);
 	    while(Obj.hasNext())
 	    {
 	    	patientID=Obj.nextInt();

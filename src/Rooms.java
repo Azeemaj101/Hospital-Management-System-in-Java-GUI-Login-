@@ -10,6 +10,8 @@ public class Rooms
 	private static String TotalLocalRooms;
 	private static String TotalVIPRooms;
 	private static String TotalICU;
+	Scanner input=new Scanner(System.in); 
+	
 	public static void setTotalLocalRooms(String totalLocalRooms) {
 		TotalLocalRooms = totalLocalRooms;
 	}
@@ -25,7 +27,6 @@ public class Rooms
 		int Recovery=0;
 		int Question=0;
 		int Forget=0;
-		Scanner input=new Scanner(System.in); 
 		while(f==false)
 		{
 			if(Password==1234 || Password==Forget)

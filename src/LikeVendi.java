@@ -117,7 +117,6 @@ public class LikeVendi extends HospitalManagementSystem
 	    	{
 	    		long Bill=price[i2]*Quan;
 	    		System.out.println("Food's Bill is ="+Bill);
-	    		int i1=0;
 	    	    long Money=0;
 	    	 	FileReader MFin;
 	    	 	BufferedReader MBin = null;
@@ -127,7 +126,6 @@ public class LikeVendi extends HospitalManagementSystem
 	    	 	while(MObj.hasNext())
 	    	 	    {
 	    	 	    	Money=MObj.nextLong();
-	    	 	    	i1++;
 	    	 	    }
 	    	 	long FBill=Money+Bill;
 	        	FileWriter Fout;
@@ -187,7 +185,6 @@ public class LikeVendi extends HospitalManagementSystem
 	    FileWriter Fout =new FileWriter(file1); 
 	    BufferedWriter Bout=new BufferedWriter(Fout);
 	    Scanner Obj=new Scanner(Bin);
-	    Scanner INPUT=new Scanner(System.in);
 	    while(Obj.hasNext())
 	    {
 	    	Token[i]=Obj.nextInt();
@@ -232,7 +229,6 @@ public class LikeVendi extends HospitalManagementSystem
 	    FileWriter Fout =new FileWriter(file1); 
 	    BufferedWriter Bout=new BufferedWriter(Fout);
 	    Scanner Obj=new Scanner(Bin);
-	    Scanner INPUT=new Scanner(System.in);
 	    while(Obj.hasNext())
 	    {
 	    	Token[i]=Obj.nextInt();
@@ -262,7 +258,6 @@ public class LikeVendi extends HospitalManagementSystem
 	    FileReader Fin=new FileReader(file);
 	    BufferedReader Bin=new BufferedReader(Fin);
 	    Scanner Obj=new Scanner(Bin);
-	    Scanner INPUT=new Scanner(System.in);
 	    while(Obj.hasNext())
 	    {
 	    	Token[i]=Obj.nextInt();

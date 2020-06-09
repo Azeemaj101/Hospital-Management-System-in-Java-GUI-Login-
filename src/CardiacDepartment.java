@@ -12,6 +12,7 @@ public abstract class CardiacDepartment extends HospitalManagementSystem impleme
 {
 	private String DeptBlockNumber;
 	private String HeadName;
+	Scanner input=new Scanner(System.in);
 	
 	public void setHeadName(String headName) 
 	{
@@ -26,8 +27,7 @@ public abstract class CardiacDepartment extends HospitalManagementSystem impleme
 		boolean f=false;
 		int Recovery=0;
 		int Question=0;
-		int Forget=0;
-		Scanner input=new Scanner(System.in); 
+		int Forget=0; 
 		while(f==false)
 		{
 			if(Password==1234 || Password==Forget)
@@ -233,7 +233,6 @@ class Cardiacreceptionist extends CardiacDepartment
 	    FileWriter Fout =new FileWriter(file1); 
 	    BufferedWriter Bout=new BufferedWriter(Fout);
 	    Scanner Obj=new Scanner(Bin);
-	    Scanner INPUT=new Scanner(System.in);
 	    while(Obj.hasNext())
 	    {
 	    	DoctorID[i]=Obj.nextInt();

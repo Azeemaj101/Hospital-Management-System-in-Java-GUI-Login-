@@ -11,6 +11,7 @@ public class HospitalParking
 	private String VehicleNumber;
 	private String TokenNumber;
 	private String VehicleType;
+	Scanner INPUT=new Scanner(System.in);
 	public void setVehicleType(String vehicleType) 
 	{
 		VehicleType = vehicleType;
@@ -57,6 +58,7 @@ public class HospitalParking
 	}
 	    Fin.close();
 	    Bin.close();
+	    Obj.close();
 	    }
 	void Search(int FindToken)throws IOException
 	{
@@ -124,7 +126,7 @@ public class HospitalParking
 	    FileWriter Fout =new FileWriter(file1); 
 	    BufferedWriter Bout=new BufferedWriter(Fout);
 	    Scanner Obj=new Scanner(Bin);
-	    Scanner INPUT=new Scanner(System.in);
+	    
 	    while(Obj.hasNext())
 	    {
 	    	TNumber=Obj.nextInt();

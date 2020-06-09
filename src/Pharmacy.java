@@ -118,7 +118,6 @@ public class Pharmacy extends HospitalManagementSystem
 	    		long Bill=price[i2]*Quan;
 	    		System.out.println("Medicine's Bill is ="+Bill);
 	    		long Money=0;
-	    		int i1=0;
 	    	 	FileReader MFin;
 	    	 	BufferedReader MBin = null;
 	    	 	MFin=new FileReader("HospitalBANK.txt");
@@ -127,7 +126,6 @@ public class Pharmacy extends HospitalManagementSystem
 	    	 	while(MObj.hasNext())
 	    	 	    {
 	    	 	    	Money=MObj.nextLong();
-	    	 	    	i1++;
 	    	 	    }
 	    	 	long FBill=Money+Bill;
 	        	FileWriter Fout;

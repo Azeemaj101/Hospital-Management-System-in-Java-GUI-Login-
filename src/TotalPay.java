@@ -4,7 +4,6 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
-import java.io.Console;
 
 public abstract class TotalPay extends HospitalManagementSystem
 {

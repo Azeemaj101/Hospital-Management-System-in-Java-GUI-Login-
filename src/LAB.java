@@ -168,7 +168,6 @@ void Uupdate(int Find)throws IOException
 }
 public void LabPament() throws IOException, InterruptedException
 {
-	int i=0;
 	int LBill=1000;
     	long Money=0;
  	    FileReader MFin;
@@ -180,7 +179,6 @@ public void LabPament() throws IOException, InterruptedException
  	    while(MObj.hasNext())
  	    {
  	    	Money=MObj.nextLong();
- 	    	i++;
  	    }
     	if(LBill>0)
     	{

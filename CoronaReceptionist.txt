@@ -4,7 +4,7 @@
 3 14 Dr.Shaista
 4 15 Dr.Nimra
 5 16 Dr.Zoya
-6 17 Dr.Afnan
+6 17 Dr.Talha
 7 18 Dr.Amreen
 8 19 Dr.Maryam
 9 20 Dr.Areeba
