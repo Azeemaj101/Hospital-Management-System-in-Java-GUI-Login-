@@ -6,8 +6,10 @@ import java.util.concurrent.TimeUnit;
 
 public class MainClass 
 {
+	
 	public static void main(String [] args) throws InterruptedException, IOException
 	{
+		System.out.println("Add Line For Git Hub Test");
 		Scanner input=new Scanner(System.in);
 		HospitalManagementSystem obj=new HospitalManagementSystem();
 		LocalDateTime RuffTime=LocalDateTime.now();
