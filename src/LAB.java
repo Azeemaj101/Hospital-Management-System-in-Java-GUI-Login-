@@ -8,10 +8,12 @@ import java.util.Scanner;
 
 public abstract class LAB extends HospitalManagementSystem
 {
+	
 	private final static String Accountant="Muhammad Azeem";
 	private final static String ContactNo="03244064060";
 	protected String TestName;
 	protected String PatientName;
+	
 	public abstract void setTestName(String testName);
 	public abstract void setPatientName(String patientName);
 	public void DisplayManager()
