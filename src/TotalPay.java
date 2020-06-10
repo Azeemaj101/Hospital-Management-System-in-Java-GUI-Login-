@@ -286,12 +286,13 @@ class DNWPay extends TotalPay
 	    boolean Bak=false;
 	    while(Bak==false)
 	    {
-	    System.out.println("Welcome HBL Bank Account");
-		System.out.println("Press 1 For Send Salary To All");
-		System.out.println("Press 2 For Send Salary To Doctors");
-		System.out.println("Press 3 For Send Salary To Workers");
-		System.out.println("Press 4 For Send Salary To Nurses");
-		System.out.println("Press 5 For ADD Money in Bank");
+	    System.out.println("Welcome HBL Bank Account           ");
+		System.out.println("Press 1 For Send Salary  To All    ");
+		System.out.println("Press 2 For Send Salary  To Doctors");
+		System.out.println("Press 3 For Send Salary  To Workers");
+		System.out.println("Press 4 For Send Salary  To Nurses ");
+		System.out.println("Press 5 For ADD  Money   in Bank   ");
+		System.out.println("Press 6 For Bank Menu              ");
 	    int bak=input.nextInt(); 
 	    if(bak==1)
 	    {
@@ -475,6 +476,15 @@ class DNWPay extends TotalPay
 	 	   NTotal = 0;
 	 	   WTotal = 0;
 	 	    Bak=true;
+	    }
+	    else if(bak==6)
+	    {
+	    	Bak=true;
+	    	for(int a=0 ; a<=40 ; a++)
+	    	{
+	    		System.out.println();	
+	    	}
+	    	
 	    }
 	    else
 	    {

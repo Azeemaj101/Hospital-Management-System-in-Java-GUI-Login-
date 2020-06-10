@@ -5,7 +5,6 @@ import java.time.format.DateTimeFormatter;
 import java.util.concurrent.TimeUnit;
 
 public class MainClass 
-
 {
 	public static void main(String [] args) throws InterruptedException, IOException
 	{
@@ -4471,7 +4470,7 @@ public class MainClass
 					{
 						System.out.println();
 					}
-					System.out.println("Delete Doctor ID");
+					System.out.println("Delete Nurses ID");
 					int Find=input.nextInt();
 					HN.NDelete(Find);
 					boolean whileHND=false;
@@ -4525,7 +4524,7 @@ public class MainClass
 					{
 						System.out.println();
 					}
-					System.out.println("Update Doctor ID");
+					System.out.println("Update Nurses ID");
 					int UFind=input.nextInt();
 					HN.NUpdate(UFind);
 					boolean whileHNU=false;
@@ -4726,7 +4725,7 @@ public class MainClass
 				{
 					System.out.println();
 				}
-				System.out.println("Find Doctor");
+				System.out.println("Find Worker");
 				int FindID=input.nextInt();
 				HW.WSearch(FindID);
 				System.out.println("\n\n\n\n");
@@ -4781,7 +4780,7 @@ public class MainClass
 				{
 					System.out.println();
 				}
-				System.out.println("Delete Doctor ID");
+				System.out.println("Delete Worker ID");
 				int Find=input.nextInt();
 				HW.WDelete(Find);
 				boolean whileHWD=false;
@@ -4835,7 +4834,7 @@ public class MainClass
 				{
 					System.out.println();
 				}
-				System.out.println("Update Doctor ID");
+				System.out.println("Update Worker ID");
 				int UFind=input.nextInt();
 				HW.WUpdate(UFind);
 				boolean whileHWU=false;
@@ -5336,7 +5335,7 @@ public class MainClass
 				boolean whileRGU=false;
 				while(whileRGU==false)
 				{
-					System.out.println("Press Enter To Continue....");
+					System.out.println("\nPress Enter To Continue....");
 					System.in.read();
 					for(int i=0; i<=40 ; i++)
 					{
@@ -5411,7 +5410,8 @@ public class MainClass
 			System.out.println("Press 2 For Total Nurses      PAY");
 			System.out.println("Press 3 For Total Workers     PAY");
 			System.out.println("Press 4 For Total Grand Total PAY");
-			System.out.println("Press 5 For Send  PAY         PAY");
+			System.out.println("Press 5 For Send  All         PAY");
+			System.out.println("Press 6 For        Exit          ");
 			for(int i=0; i<=15 ; i++)
 			{
 				System.out.println();
@@ -5650,6 +5650,15 @@ public class MainClass
 					}
 				}
 				}
+				break;
+			}
+			case 6:
+			{
+				whilPay=true;
+				for(int a=0 ; a<=40 ; a++)
+		    	{
+		    		System.out.println();	
+		    	}
 				break;
 			}
 			default:
@@ -6084,6 +6093,7 @@ public class MainClass
 						System.out.println();
 					}
 				}
+				break;
 				}
 				break;
 			}
@@ -6524,7 +6534,7 @@ public class MainClass
 				else
 				{
 					System.out.println("\n\n\n\n");
-					System.out.println("Press Right Key");
+					System.out.println("Press Right Key0000000");
 					System.out.println("Press Enter To Continue....");
 					System.in.read();
 					for(int i=0; i<=40 ; i++)
@@ -6535,7 +6545,7 @@ public class MainClass
 				}
 			}
 			}
-			if(PharmacyLogin.b!=0)
+			else if(PharmacyLogin.b!=0)
 			{
 				PharmacyLogin.b=0;
 			for(int i=0; i<=40 ; i++)

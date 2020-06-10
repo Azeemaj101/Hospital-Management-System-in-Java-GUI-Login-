@@ -38,4 +38,4 @@
 37 1500 355 Nutella
 38 1500 55 Chocolate
 39 1500 150 Chicken_Spread
-40 1500 30 Kurkure
+40 1000 30 Kurkure
