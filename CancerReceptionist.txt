@@ -1,7 +1,7 @@
 
 1 12 Dr.Azeem
 2 13 Dr.Abdul
-3 14 Dr.Lateef
+3 14 Dr.Izzab
 4 15 Dr.Marzuq
 5 16 Dr.Fawzi
 6 17 Dr.Aisha
